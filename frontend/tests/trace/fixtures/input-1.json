@@ -1,0 +1,1092 @@
+{
+  "name": "input",
+  "oracle": "RUNNER_IO wire + ENCODER independent decoder",
+  "trace": {
+    "schemaVersion": "1.0",
+    "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+    "sourceCode": "a=input('Q:')\nprint(a)\nb=input('Second:')\nprint(b)",
+    "sourceFileName": "<codetrace-user>",
+    "pythonVersion": "3.13.16",
+    "checkpointInterval": 1,
+    "limits": {
+      "active_runs": 1,
+      "retained_results": 1,
+      "code_bytes": 65536,
+      "max_events": 100000,
+      "trace_bytes": 52428800,
+      "terminal_reserve_bytes": 2097152,
+      "registry_objects": 10000,
+      "state_objects": 2000,
+      "state_bytes": 1048576,
+      "collection_items": 1000,
+      "instance_attributes": 1000,
+      "string_bytes": 16384,
+      "integer_decimal_digits": 1000,
+      "active_frames": 128,
+      "console_bytes": 65536,
+      "output_chunk_bytes": 4096,
+      "input_value_bytes": 8192,
+      "input_requests": 32,
+      "checkpoint_interval": 1,
+      "active_timeout_ms": 10000,
+      "input_idle_timeout_ms": 120000,
+      "container_lifetime_ms": 300000,
+      "startup_timeout_ms": 15000,
+      "result_ttl_ms": 300000,
+      "cleanup_command_timeout_ms": 3000,
+      "cleanup_attempts": 2,
+      "finalization_timeout_ms": 120000,
+      "watchdog_tick_ms": 50,
+      "memory_bytes": 536870912,
+      "memory_plus_swap_bytes": 536870912,
+      "cpus": 1.0,
+      "pids_limit": 16,
+      "tmpfs_bytes": 16777216,
+      "runner_message_bytes": 2097152,
+      "ws_message_bytes": 524288,
+      "native_stderr_bytes": 16384,
+      "history_entries": 100,
+      "max_visual_nodes": 200,
+      "visible_array_items": 200
+    },
+    "events": [
+      {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 0,
+        "kind": "CALL",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": null
+        },
+        "stateVersion": 1
+      },
+      {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 1,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "stateVersion": 1
+      },
+      {
+        "consoleOffset": 2,
+        "frameId": "f1",
+        "index": 2,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "stateVersion": 2
+      },
+      {
+        "consoleOffset": 4,
+        "frameId": "f1",
+        "index": 3,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "stateVersion": 2
+      },
+      {
+        "consoleOffset": 6,
+        "frameId": "f1",
+        "index": 4,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "stateVersion": 3
+      },
+      {
+        "consoleOffset": 7,
+        "frameId": "f1",
+        "index": 5,
+        "kind": "RETURN",
+        "payload": {
+          "returnValue": null,
+          "returnValueKnown": false
+        },
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "stateVersion": 3
+      },
+      {
+        "index": 6,
+        "kind": "RUN_END",
+        "stateVersion": 4,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 7,
+        "payload": {}
+      }
+    ],
+    "states": [
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [],
+          "globals": [],
+          "objects": [],
+          "stack": [],
+          "version": 0
+        },
+        "version": 0
+      },
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            }
+          ],
+          "globals": [],
+          "objects": [],
+          "stack": ["f1"],
+          "version": 1
+        },
+        "version": 1
+      },
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            }
+          ],
+          "globals": [
+            {
+              "name": "a",
+              "value": {
+                "kind": "scalar",
+                "type": "str",
+                "value": "  \ud83d\ude00  "
+              }
+            }
+          ],
+          "objects": [],
+          "stack": ["f1"],
+          "version": 2
+        },
+        "version": 2
+      },
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            }
+          ],
+          "globals": [
+            {
+              "name": "a",
+              "value": {
+                "kind": "scalar",
+                "type": "str",
+                "value": "  \ud83d\ude00  "
+              }
+            },
+            {
+              "name": "b",
+              "value": {
+                "kind": "scalar",
+                "type": "str",
+                "value": ""
+              }
+            }
+          ],
+          "objects": [],
+          "stack": ["f1"],
+          "version": 3
+        },
+        "version": 3
+      },
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [],
+          "globals": [
+            {
+              "name": "a",
+              "value": {
+                "kind": "scalar",
+                "type": "str",
+                "value": "  \ud83d\ude00  "
+              }
+            },
+            {
+              "name": "b",
+              "value": {
+                "kind": "scalar",
+                "type": "str",
+                "value": ""
+              }
+            }
+          ],
+          "objects": [],
+          "stack": [],
+          "version": 4
+        },
+        "version": 4
+      }
+    ],
+    "console": [
+      {
+        "index": 0,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "Q:"
+      },
+      {
+        "index": 1,
+        "kind": "input",
+        "requestId": "q1",
+        "text": "  \ud83d\ude00  \n"
+      },
+      {
+        "index": 2,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "  \ud83d\ude00  "
+      },
+      {
+        "index": 3,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "\n"
+      },
+      {
+        "index": 4,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "Second:"
+      },
+      {
+        "index": 5,
+        "kind": "input",
+        "requestId": "q2",
+        "text": "\n"
+      },
+      {
+        "index": 6,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "\n"
+      }
+    ],
+    "completion": {
+      "outcome": "SUCCESS",
+      "reason": "NONE",
+      "traceComplete": true,
+      "stateAccuracy": "final",
+      "primaryDiagnostic": null,
+      "acceptedAt": "2026-10-05T15:00:00.000Z",
+      "finishedAt": "2026-10-05T15:00:00.125Z",
+      "activeElapsedMs": 125.25,
+      "waitingElapsedMs": 0,
+      "exitCode": 0,
+      "cleanupConfirmed": true
+    }
+  },
+  "expected": [
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 1
+      },
+      "event": {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 0,
+        "kind": "CALL",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": null
+        },
+        "stateVersion": 1
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": null,
+        "mode": "none"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 1
+      },
+      "event": {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 1,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "stateVersion": 1
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [
+          {
+            "name": "a",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": "  \ud83d\ude00  "
+            }
+          }
+        ],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 2
+      },
+      "event": {
+        "consoleOffset": 2,
+        "frameId": "f1",
+        "index": 2,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "stateVersion": 2
+      },
+      "globals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        }
+      ],
+      "selectedFrameId": "f1",
+      "selectedLocals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Q:"
+        },
+        {
+          "index": 1,
+          "kind": "input",
+          "requestId": "q1",
+          "text": "  \ud83d\ude00  \n"
+        }
+      ],
+      "highlight": {
+        "lineNumber": 2,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [
+          {
+            "name": "a",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": "  \ud83d\ude00  "
+            }
+          }
+        ],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 2
+      },
+      "event": {
+        "consoleOffset": 4,
+        "frameId": "f1",
+        "index": 3,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "stateVersion": 2
+      },
+      "globals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        }
+      ],
+      "selectedFrameId": "f1",
+      "selectedLocals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Q:"
+        },
+        {
+          "index": 1,
+          "kind": "input",
+          "requestId": "q1",
+          "text": "  \ud83d\ude00  \n"
+        },
+        {
+          "index": 2,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "  \ud83d\ude00  "
+        },
+        {
+          "index": 3,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        }
+      ],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [
+          {
+            "name": "a",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": "  \ud83d\ude00  "
+            }
+          },
+          {
+            "name": "b",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": ""
+            }
+          }
+        ],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 3
+      },
+      "event": {
+        "consoleOffset": 6,
+        "frameId": "f1",
+        "index": 4,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "stateVersion": 3
+      },
+      "globals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        },
+        {
+          "name": "b",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": ""
+          }
+        }
+      ],
+      "selectedFrameId": "f1",
+      "selectedLocals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        },
+        {
+          "name": "b",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": ""
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Q:"
+        },
+        {
+          "index": 1,
+          "kind": "input",
+          "requestId": "q1",
+          "text": "  \ud83d\ude00  \n"
+        },
+        {
+          "index": 2,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "  \ud83d\ude00  "
+        },
+        {
+          "index": 3,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        },
+        {
+          "index": 4,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Second:"
+        },
+        {
+          "index": 5,
+          "kind": "input",
+          "requestId": "q2",
+          "text": "\n"
+        }
+      ],
+      "highlight": {
+        "lineNumber": 4,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [
+          {
+            "name": "a",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": "  \ud83d\ude00  "
+            }
+          },
+          {
+            "name": "b",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": ""
+            }
+          }
+        ],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 3
+      },
+      "event": {
+        "consoleOffset": 7,
+        "frameId": "f1",
+        "index": 5,
+        "kind": "RETURN",
+        "payload": {
+          "returnValue": null,
+          "returnValueKnown": false
+        },
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "stateVersion": 3
+      },
+      "globals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        },
+        {
+          "name": "b",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": ""
+          }
+        }
+      ],
+      "selectedFrameId": "f1",
+      "selectedLocals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        },
+        {
+          "name": "b",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": ""
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Q:"
+        },
+        {
+          "index": 1,
+          "kind": "input",
+          "requestId": "q1",
+          "text": "  \ud83d\ude00  \n"
+        },
+        {
+          "index": 2,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "  \ud83d\ude00  "
+        },
+        {
+          "index": 3,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        },
+        {
+          "index": 4,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Second:"
+        },
+        {
+          "index": 5,
+          "kind": "input",
+          "requestId": "q2",
+          "text": "\n"
+        },
+        {
+          "index": 6,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        }
+      ],
+      "highlight": {
+        "lineNumber": 4,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [],
+        "globals": [
+          {
+            "name": "a",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": "  \ud83d\ude00  "
+            }
+          },
+          {
+            "name": "b",
+            "value": {
+              "kind": "scalar",
+              "type": "str",
+              "value": ""
+            }
+          }
+        ],
+        "objects": [],
+        "stack": [],
+        "version": 4
+      },
+      "event": {
+        "index": 6,
+        "kind": "RUN_END",
+        "stateVersion": 4,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 7,
+        "payload": {}
+      },
+      "globals": [
+        {
+          "name": "a",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": "  \ud83d\ude00  "
+          }
+        },
+        {
+          "name": "b",
+          "value": {
+            "kind": "scalar",
+            "type": "str",
+            "value": ""
+          }
+        }
+      ],
+      "selectedFrameId": null,
+      "selectedLocals": [],
+      "callStack": [],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Q:"
+        },
+        {
+          "index": 1,
+          "kind": "input",
+          "requestId": "q1",
+          "text": "  \ud83d\ude00  \n"
+        },
+        {
+          "index": 2,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "  \ud83d\ude00  "
+        },
+        {
+          "index": 3,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        },
+        {
+          "index": 4,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "Second:"
+        },
+        {
+          "index": 5,
+          "kind": "input",
+          "requestId": "q2",
+          "text": "\n"
+        },
+        {
+          "index": 6,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        }
+      ],
+      "highlight": {
+        "lineNumber": null,
+        "mode": "none"
+      },
+      "eventDiagnostic": null,
+      "completion": {
+        "outcome": "SUCCESS",
+        "reason": "NONE",
+        "traceComplete": true,
+        "stateAccuracy": "final",
+        "primaryDiagnostic": null,
+        "acceptedAt": "2026-10-05T15:00:00.000Z",
+        "finishedAt": "2026-10-05T15:00:00.125Z",
+        "activeElapsedMs": 125.25,
+        "waitingElapsedMs": 0,
+        "exitCode": 0,
+        "cleanupConfirmed": true
+      }
+    }
+  ]
+}

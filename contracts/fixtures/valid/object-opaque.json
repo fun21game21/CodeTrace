@@ -1,0 +1,6 @@
+{
+  "id": "o1",
+  "kind": "opaque",
+  "pythonType": "bytes",
+  "reason": "unsupported_type"
+}

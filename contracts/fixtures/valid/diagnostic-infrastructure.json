@@ -1,0 +1,10 @@
+{
+  "category": "infrastructure",
+  "code": "RUNNER_FAILURE",
+  "typeName": null,
+  "message": "bad value",
+  "source": null,
+  "columnNumber": null,
+  "traceback": [],
+  "omittedTracebackFrames": 0
+}

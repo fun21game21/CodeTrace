@@ -1,0 +1,21 @@
+{
+  "id": "o1",
+  "kind": "instance",
+  "className": "Node",
+  "attrs": [
+    {
+      "name": "left",
+      "value": {
+        "$ref": "o1"
+      }
+    },
+    {
+      "name": "value",
+      "value": {
+        "kind": "scalar",
+        "type": "int",
+        "value": "9007199254740993"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "o1",
+  "kind": "deque",
+  "items": [
+    {
+      "kind": "scalar",
+      "type": "int",
+      "value": "9007199254740993"
+    }
+  ],
+  "maxlen": null
+}

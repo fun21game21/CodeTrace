@@ -1,0 +1,9 @@
+{
+  "apiVersion": 1,
+  "seq": 1,
+  "type": "status",
+  "runId": "o1",
+  "payload": {
+    "status": "WAITING_INPUT"
+  }
+}

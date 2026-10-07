@@ -1,0 +1,527 @@
+[
+  {
+    "file": "empty-1.json",
+    "scenario": "empty",
+    "interval": 1,
+    "steps": 3,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "pass-1.json",
+    "scenario": "pass",
+    "interval": 1,
+    "steps": 4,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "assignment-1.json",
+    "scenario": "assignment",
+    "interval": 1,
+    "steps": 7,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "unchanged-1.json",
+    "scenario": "unchanged",
+    "interval": 1,
+    "steps": 8,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "loop-1.json",
+    "scenario": "loop",
+    "interval": 1,
+    "steps": 12,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "list-1.json",
+    "scenario": "list",
+    "interval": 1,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "nested-1.json",
+    "scenario": "nested",
+    "interval": 1,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "function-1.json",
+    "scenario": "function",
+    "interval": 1,
+    "steps": 9,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "recursion-1.json",
+    "scenario": "recursion",
+    "interval": 1,
+    "steps": 20,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "handled-1.json",
+    "scenario": "handled",
+    "interval": 1,
+    "steps": 8,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "propagated-1.json",
+    "scenario": "propagated",
+    "interval": 1,
+    "steps": 10,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "class-1.json",
+    "scenario": "class",
+    "interval": 1,
+    "steps": 14,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "return_root-1.json",
+    "scenario": "return_root",
+    "interval": 1,
+    "steps": 9,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "alias-1.json",
+    "scenario": "alias",
+    "interval": 1,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "self_cycle-1.json",
+    "scenario": "self_cycle",
+    "interval": 1,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "mutual_cycle-1.json",
+    "scenario": "mutual_cycle",
+    "interval": 1,
+    "steps": 7,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "all_types-1.json",
+    "scenario": "all_types",
+    "interval": 1,
+    "steps": 10,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "specials-1.json",
+    "scenario": "specials",
+    "interval": 1,
+    "steps": 12,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "syntax-1.json",
+    "scenario": "syntax",
+    "interval": 1,
+    "steps": 1,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder"
+  },
+  {
+    "file": "console-1.json",
+    "scenario": "console",
+    "interval": 1,
+    "steps": 6,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder; synthetic stderr"
+  },
+  {
+    "file": "input-1.json",
+    "scenario": "input",
+    "interval": 1,
+    "steps": 7,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder"
+  },
+  {
+    "file": "binding_changes-1.json",
+    "scenario": "binding_changes",
+    "interval": 1,
+    "steps": 11,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "frame_changes-1.json",
+    "scenario": "frame_changes",
+    "interval": 1,
+    "steps": 7,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "boundaries-1.json",
+    "scenario": "boundaries",
+    "interval": 1,
+    "steps": 258,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "partial-1.json",
+    "scenario": "partial",
+    "interval": 1,
+    "steps": 5,
+    "oracle": "Synthetic accepted prefix + ENCODER independent decoder"
+  },
+  {
+    "file": "empty-2.json",
+    "scenario": "empty",
+    "interval": 2,
+    "steps": 3,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "pass-2.json",
+    "scenario": "pass",
+    "interval": 2,
+    "steps": 4,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "assignment-2.json",
+    "scenario": "assignment",
+    "interval": 2,
+    "steps": 7,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "unchanged-2.json",
+    "scenario": "unchanged",
+    "interval": 2,
+    "steps": 8,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "loop-2.json",
+    "scenario": "loop",
+    "interval": 2,
+    "steps": 12,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "list-2.json",
+    "scenario": "list",
+    "interval": 2,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "nested-2.json",
+    "scenario": "nested",
+    "interval": 2,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "function-2.json",
+    "scenario": "function",
+    "interval": 2,
+    "steps": 9,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "recursion-2.json",
+    "scenario": "recursion",
+    "interval": 2,
+    "steps": 20,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "handled-2.json",
+    "scenario": "handled",
+    "interval": 2,
+    "steps": 8,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "propagated-2.json",
+    "scenario": "propagated",
+    "interval": 2,
+    "steps": 10,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "class-2.json",
+    "scenario": "class",
+    "interval": 2,
+    "steps": 14,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "return_root-2.json",
+    "scenario": "return_root",
+    "interval": 2,
+    "steps": 9,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "alias-2.json",
+    "scenario": "alias",
+    "interval": 2,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "self_cycle-2.json",
+    "scenario": "self_cycle",
+    "interval": 2,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "mutual_cycle-2.json",
+    "scenario": "mutual_cycle",
+    "interval": 2,
+    "steps": 7,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "all_types-2.json",
+    "scenario": "all_types",
+    "interval": 2,
+    "steps": 10,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "specials-2.json",
+    "scenario": "specials",
+    "interval": 2,
+    "steps": 12,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "syntax-2.json",
+    "scenario": "syntax",
+    "interval": 2,
+    "steps": 1,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder"
+  },
+  {
+    "file": "console-2.json",
+    "scenario": "console",
+    "interval": 2,
+    "steps": 6,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder; synthetic stderr"
+  },
+  {
+    "file": "input-2.json",
+    "scenario": "input",
+    "interval": 2,
+    "steps": 7,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder"
+  },
+  {
+    "file": "binding_changes-2.json",
+    "scenario": "binding_changes",
+    "interval": 2,
+    "steps": 11,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "frame_changes-2.json",
+    "scenario": "frame_changes",
+    "interval": 2,
+    "steps": 7,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "boundaries-2.json",
+    "scenario": "boundaries",
+    "interval": 2,
+    "steps": 258,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "partial-2.json",
+    "scenario": "partial",
+    "interval": 2,
+    "steps": 5,
+    "oracle": "Synthetic accepted prefix + ENCODER independent decoder"
+  },
+  {
+    "file": "empty-128.json",
+    "scenario": "empty",
+    "interval": 128,
+    "steps": 3,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "pass-128.json",
+    "scenario": "pass",
+    "interval": 128,
+    "steps": 4,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "assignment-128.json",
+    "scenario": "assignment",
+    "interval": 128,
+    "steps": 7,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "unchanged-128.json",
+    "scenario": "unchanged",
+    "interval": 128,
+    "steps": 8,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "loop-128.json",
+    "scenario": "loop",
+    "interval": 128,
+    "steps": 12,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "list-128.json",
+    "scenario": "list",
+    "interval": 128,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "nested-128.json",
+    "scenario": "nested",
+    "interval": 128,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "function-128.json",
+    "scenario": "function",
+    "interval": 128,
+    "steps": 9,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "recursion-128.json",
+    "scenario": "recursion",
+    "interval": 128,
+    "steps": 20,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "handled-128.json",
+    "scenario": "handled",
+    "interval": 128,
+    "steps": 8,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "propagated-128.json",
+    "scenario": "propagated",
+    "interval": 128,
+    "steps": 10,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "class-128.json",
+    "scenario": "class",
+    "interval": 128,
+    "steps": 14,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "return_root-128.json",
+    "scenario": "return_root",
+    "interval": 128,
+    "steps": 9,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "alias-128.json",
+    "scenario": "alias",
+    "interval": 128,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "self_cycle-128.json",
+    "scenario": "self_cycle",
+    "interval": 128,
+    "steps": 6,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "mutual_cycle-128.json",
+    "scenario": "mutual_cycle",
+    "interval": 128,
+    "steps": 7,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "all_types-128.json",
+    "scenario": "all_types",
+    "interval": 128,
+    "steps": 10,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "specials-128.json",
+    "scenario": "specials",
+    "interval": 128,
+    "steps": 12,
+    "oracle": "TRACING snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "syntax-128.json",
+    "scenario": "syntax",
+    "interval": 128,
+    "steps": 1,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder"
+  },
+  {
+    "file": "console-128.json",
+    "scenario": "console",
+    "interval": 128,
+    "steps": 6,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder; synthetic stderr"
+  },
+  {
+    "file": "input-128.json",
+    "scenario": "input",
+    "interval": 128,
+    "steps": 7,
+    "oracle": "RUNNER_IO wire + ENCODER independent decoder"
+  },
+  {
+    "file": "binding_changes-128.json",
+    "scenario": "binding_changes",
+    "interval": 128,
+    "steps": 11,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "frame_changes-128.json",
+    "scenario": "frame_changes",
+    "interval": 128,
+    "steps": 7,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "boundaries-128.json",
+    "scenario": "boundaries",
+    "interval": 128,
+    "steps": 258,
+    "oracle": "Synthetic reference snapshots + ENCODER independent decoder"
+  },
+  {
+    "file": "partial-128.json",
+    "scenario": "partial",
+    "interval": 128,
+    "steps": 5,
+    "oracle": "Synthetic accepted prefix + ENCODER independent decoder"
+  }
+]

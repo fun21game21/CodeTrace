@@ -1,0 +1,21 @@
+{
+  "id": "f1",
+  "parentId": null,
+  "kind": "class",
+  "name": "Node",
+  "qualifiedName": "Node",
+  "definitionLine": 1,
+  "callSite": null,
+  "parameterNames": [],
+  "localsSource": "own",
+  "locals": [
+    {
+      "name": "x",
+      "value": {
+        "kind": "scalar",
+        "type": "int",
+        "value": "9007199254740993"
+      }
+    }
+  ]
+}

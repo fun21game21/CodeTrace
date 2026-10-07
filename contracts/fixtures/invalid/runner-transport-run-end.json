@@ -1,0 +1,12 @@
+{
+  "kind": "event",
+  "record": {
+    "index": 2,
+    "kind": "RUN_END",
+    "stateVersion": 2,
+    "frameId": null,
+    "source": null,
+    "consoleOffset": 0,
+    "payload": {}
+  }
+}

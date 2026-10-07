@@ -1,0 +1,221 @@
+{
+  "scope": "Seven representative Steps per fixture, not an exhaustive maximum; Node selectStep time includes reconstruction and existing diff, not isolated new-field CPU cost.",
+  "results": [
+    {
+      "name": "100k-small",
+      "samples": [
+        {
+          "step": 1,
+          "selectionMs": 0.44420800000000327,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 2,
+          "selectionMs": 0.15249999999991815,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 3,
+          "selectionMs": 0.033666000000039276,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 50000,
+          "selectionMs": 0.02491599999996197,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 50001,
+          "selectionMs": 0.03458299999999781,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 99999,
+          "selectionMs": 0.021917000000030384,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 100000,
+          "selectionMs": 0.026959000000033484,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        }
+      ]
+    },
+    {
+      "name": "large-list",
+      "samples": [
+        {
+          "step": 1,
+          "selectionMs": 0.15654200000005858,
+          "entries": 1,
+          "positions": 200,
+          "diffJsonBytes": 721
+        },
+        {
+          "step": 2,
+          "selectionMs": 0.09708299999999781,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 3,
+          "selectionMs": 0.07970800000009604,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 512,
+          "selectionMs": 0.42304200000000947,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 513,
+          "selectionMs": 3.592708000000016,
+          "entries": 1,
+          "positions": 200,
+          "diffJsonBytes": 721
+        },
+        {
+          "step": 1024,
+          "selectionMs": 0.5929579999999532,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 1025,
+          "selectionMs": 2.9173749999999927,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        }
+      ]
+    },
+    {
+      "name": "object-churn",
+      "samples": [
+        {
+          "step": 1,
+          "selectionMs": 1.6933749999999463,
+          "entries": 1999,
+          "positions": 2198,
+          "diffJsonBytes": 69547
+        },
+        {
+          "step": 2,
+          "selectionMs": 0.5934169999999312,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 3,
+          "selectionMs": 4.692125000000033,
+          "entries": 2,
+          "positions": 2,
+          "diffJsonBytes": 71
+        },
+        {
+          "step": 512,
+          "selectionMs": 0.8987920000000713,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 513,
+          "selectionMs": 4.391416999999933,
+          "entries": 2,
+          "positions": 2,
+          "diffJsonBytes": 71
+        },
+        {
+          "step": 1024,
+          "selectionMs": 0.6154999999999973,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 1025,
+          "selectionMs": 4.47137500000008,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        }
+      ]
+    },
+    {
+      "name": "deep-frames",
+      "samples": [
+        {
+          "step": 1,
+          "selectionMs": 0.08754099999998743,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 2,
+          "selectionMs": 0.04841699999997218,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 3,
+          "selectionMs": 0.10866599999997106,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 512,
+          "selectionMs": 0.05920800000001236,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 513,
+          "selectionMs": 0.0922090000000253,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 1024,
+          "selectionMs": 0.04512499999998454,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        },
+        {
+          "step": 1025,
+          "selectionMs": 0.05045900000004622,
+          "entries": 0,
+          "positions": 0,
+          "diffJsonBytes": 2
+        }
+      ]
+    }
+  ]
+}

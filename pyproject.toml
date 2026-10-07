@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codetrace-contracts"
+version = "1.0.0"
+description = "CodeTrace v1 local Python execution visualizer, contracts and isolated Runner"
+requires-python = ">=3.13"
+dependencies = ["jsonschema==4.25.1"]
+
+[project.optional-dependencies]
+backend = ["fastapi==0.142.2", "uvicorn==0.54.0", "websockets==17.2"]
+test = ["pytest==8.4.2", "ruff==0.13.2", "mypy==1.18.2", "types-jsonschema==4.25.1.20251009", "httpx==0.28.1"]
+
+[tool.setuptools]
+packages = ["codetrace_contracts", "codetrace_contracts.resources", "codetrace_runner", "codetrace_backend", "codetrace_backend.docker_adapter", "codetrace_backend.runs", "codetrace_backend.trace_recorder", "codetrace_backend.transport"]
+package-dir = {codetrace_contracts = "contracts/python/codetrace_contracts", "codetrace_contracts.resources" = "contracts", "codetrace_runner" = "runner/codetrace_runner", codetrace_backend = "backend/codetrace_backend"}
+
+[tool.setuptools.package-data]
+"codetrace_contracts.resources" = ["*.schema.json", "defaults.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["contracts/tests/python", "runner/tests", "backend/tests"]
+pythonpath = ["contracts/python", "runner", "backend"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+files = ["contracts/python", "runner/codetrace_runner", "backend/codetrace_backend"]

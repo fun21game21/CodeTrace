@@ -1,0 +1,39 @@
+{
+  "name": "codetrace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-reporter=spec contracts/tests/typescript/*.test.ts frontend/tests/trace/*.test.ts frontend/tests/runs/*.test.ts frontend/tests/viewer/*.test.ts frontend/tests/performance/*.test.ts frontend/tests/visualizers/*.test.ts frontend/tests/visualizer_fixtures/*.test.ts frontend/tests/history/*.test.ts frontend/tests/examples/*.test.ts && node frontend/scripts/test_viewer_components.mjs && node frontend/scripts/test_visualizers_components.mjs && node frontend/scripts/test_history_components.mjs && node frontend/scripts/test_examples_components.mjs",
+    "lint": "tsc --noEmit --noUnusedLocals --noUnusedParameters",
+    "typecheck": "tsc --noEmit",
+    "format:check": "prettier --check contracts frontend/src frontend/tests frontend/scripts/*.mjs frontend/benchmarks/*.ts frontend/benchmarks/*.tsx frontend/benchmarks/*.html frontend/vite.config.ts frontend/index.html pnpm-workspace.yaml package.json tsconfig.json README.md docs/*.md",
+    "format": "prettier --write contracts frontend/src frontend/tests frontend/scripts/*.mjs frontend/benchmarks/*.ts frontend/benchmarks/*.tsx frontend/benchmarks/*.html frontend/vite.config.ts frontend/index.html pnpm-workspace.yaml package.json tsconfig.json README.md docs/*.md",
+    "dev": "vite --config frontend/vite.config.ts",
+    "build": "vite build --config frontend/vite.config.ts",
+    "test:viewer-ui": "node frontend/scripts/test_viewer_components.mjs",
+    "benchmark": "python3.13 frontend/scripts/benchmark_performance.py"
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "monaco-editor": "0.57.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.7.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/ws": "8.18.2",
+    "fake-indexeddb": "6.2.4",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "vite": "8.3.3",
+    "ws": "8.22.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@11.19.0"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "f1",
+  "parentId": false,
+  "kind": "module",
+  "name": "<module>",
+  "qualifiedName": "<module>",
+  "definitionLine": null,
+  "callSite": null,
+  "parameterNames": [],
+  "localsSource": "globals",
+  "locals": []
+}

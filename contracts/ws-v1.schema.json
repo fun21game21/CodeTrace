@@ -1,0 +1,590 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codetrace.local/contracts/ws-v1.schema.json",
+  "$ref": "#/$defs/WsMessage",
+  "$defs": {
+    "socket_ready": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "socket_ready"
+        },
+        "runId": {
+          "const": null
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "limits": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/ResourceLimits"
+            },
+            "apiVersion": {
+              "const": 1
+            }
+          },
+          "required": ["limits", "apiVersion"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "start": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "start"
+        },
+        "runId": {
+          "const": null
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "clientRequestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+            },
+            "code": {
+              "type": "string"
+            }
+          },
+          "required": ["clientRequestId", "code"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "run_accepted": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "run_accepted"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "clientRequestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+            },
+            "acceptedAt": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/Timestamp"
+            },
+            "status": {
+              "const": "STARTING"
+            }
+          },
+          "required": ["clientRequestId", "acceptedAt", "status"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "run_rejected": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "run_rejected"
+        },
+        "runId": {
+          "const": null
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "clientRequestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+            },
+            "code": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "SYNTAX_ERROR",
+                "UNCAUGHT_EXCEPTION",
+                "UNSUPPORTED_FEATURE",
+                "ACTIVE_TIMEOUT",
+                "INPUT_IDLE_TIMEOUT",
+                "CONTAINER_LIFETIME",
+                "STARTUP_TIMEOUT",
+                "MEMORY_LIMIT",
+                "EVENT_LIMIT",
+                "TRACE_BYTES_LIMIT",
+                "REGISTRY_LIMIT",
+                "STATE_BYTES_LIMIT",
+                "COLLECTION_LIMIT",
+                "STRING_LIMIT",
+                "INT_DIGITS_LIMIT",
+                "CONSOLE_LIMIT",
+                "FRAME_LIMIT",
+                "INPUT_REQUEST_LIMIT",
+                "DOCKER_UNAVAILABLE",
+                "IMAGE_UNAVAILABLE",
+                "CLIENT_PROTOCOL_ERROR",
+                "RUNNER_PROTOCOL_ERROR",
+                "RUNNER_FAILURE",
+                "TRACE_RECORDER_FAILURE",
+                "FINALIZATION_TIMEOUT",
+                "CLEANUP_FAILED",
+                "CONNECTION_LOST",
+                "BACKEND_SHUTDOWN",
+                "RUN_BUSY",
+                "INVALID_START",
+                "CODE_TOO_LARGE",
+                "INVALID_INPUT",
+                "INPUT_ALREADY_ACCEPTED",
+                "RESULT_NOT_AVAILABLE"
+              ]
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "required": ["clientRequestId", "code", "message"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "status"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunStatus"
+            }
+          },
+          "required": ["status"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "console": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "console"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "entry": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/ConsoleEntry"
+            }
+          },
+          "required": ["entry"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "input_request": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "input_request"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RequestId"
+            },
+            "prompt": {
+              "type": "string"
+            },
+            "consoleOffset": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "deadlineAt": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/Timestamp"
+            }
+          },
+          "required": ["requestId", "prompt", "consoleOffset", "deadlineAt"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "input_response": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "input_response"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RequestId"
+            },
+            "text": {
+              "type": "string",
+              "pattern": "^[^\\r\\n]*$(?![\\s\\S])"
+            }
+          },
+          "required": ["requestId", "text"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "input_accepted": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "input_accepted"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RequestId"
+            }
+          },
+          "required": ["requestId"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "input_rejected": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "input_rejected"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RequestId"
+            },
+            "code": {
+              "type": "string",
+              "enum": ["INVALID_INPUT", "INPUT_ALREADY_ACCEPTED"]
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "required": ["requestId", "code", "message"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "run_finished": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "run_finished"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "completion": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/Completion"
+            },
+            "traceAvailable": {
+              "type": "boolean"
+            },
+            "traceUrl": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "traceBytes": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "eventCount": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "completion",
+            "traceAvailable",
+            "traceUrl",
+            "traceBytes",
+            "eventCount"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "traceAvailable": {
+                    "const": true
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "traceUrl": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "traceBytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "eventCount": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "completion": {
+                    "properties": {
+                      "cleanupConfirmed": {
+                        "const": true
+                      }
+                    }
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "traceUrl": {
+                    "const": null
+                  },
+                  "traceBytes": {
+                    "const": null
+                  },
+                  "eventCount": {
+                    "const": null
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "protocol_error": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "protocol_error"
+        },
+        "runId": {
+          "anyOf": [
+            {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "CLIENT_PROTOCOL_ERROR",
+                "RUN_BUSY",
+                "INVALID_START",
+                "CODE_TOO_LARGE",
+                "INVALID_INPUT",
+                "INPUT_ALREADY_ACCEPTED",
+                "RESULT_NOT_AVAILABLE"
+              ]
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "required": ["code", "message"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["apiVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "WsMessage": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/socket_ready"
+        },
+        {
+          "$ref": "#/$defs/start"
+        },
+        {
+          "$ref": "#/$defs/run_accepted"
+        },
+        {
+          "$ref": "#/$defs/run_rejected"
+        },
+        {
+          "$ref": "#/$defs/status"
+        },
+        {
+          "$ref": "#/$defs/console"
+        },
+        {
+          "$ref": "#/$defs/input_request"
+        },
+        {
+          "$ref": "#/$defs/input_response"
+        },
+        {
+          "$ref": "#/$defs/input_accepted"
+        },
+        {
+          "$ref": "#/$defs/input_rejected"
+        },
+        {
+          "$ref": "#/$defs/run_finished"
+        },
+        {
+          "$ref": "#/$defs/protocol_error"
+        }
+      ]
+    }
+  }
+}

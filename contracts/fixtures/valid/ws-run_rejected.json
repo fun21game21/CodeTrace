@@ -1,0 +1,11 @@
+{
+  "apiVersion": 1,
+  "seq": 1,
+  "type": "run_rejected",
+  "runId": null,
+  "payload": {
+    "clientRequestId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+    "code": "RUN_BUSY",
+    "message": "busy"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "outcome": "SYSTEM_ERROR",
+  "reason": "RUNNER_FAILURE",
+  "traceComplete": false,
+  "stateAccuracy": "last_observed",
+  "primaryDiagnostic": {
+    "category": "infrastructure",
+    "code": "RUNNER_FAILURE",
+    "typeName": null,
+    "message": "bad value",
+    "source": null,
+    "columnNumber": null,
+    "traceback": [],
+    "omittedTracebackFrames": 0
+  },
+  "acceptedAt": "2026-10-05T15:00:00.000Z",
+  "finishedAt": "2026-10-05T15:00:00.125Z",
+  "activeElapsedMs": 125.25,
+  "waitingElapsedMs": 0,
+  "exitCode": null,
+  "cleanupConfirmed": true
+}

@@ -1,0 +1,21 @@
+{
+  "id": "f1",
+  "parentId": null,
+  "kind": "function",
+  "name": "visit",
+  "qualifiedName": "visit",
+  "definitionLine": 1,
+  "callSite": null,
+  "parameterNames": ["x"],
+  "localsSource": "own",
+  "locals": [
+    {
+      "name": "x",
+      "value": {
+        "kind": "scalar",
+        "type": "int",
+        "value": "9007199254740993"
+      }
+    }
+  ]
+}

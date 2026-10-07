@@ -1,0 +1,27 @@
+{
+  "kind": "delta",
+  "version": 1,
+  "baseVersion": 0,
+  "changes": {
+    "globals": null,
+    "stack": ["f1"],
+    "eventRoots": null,
+    "framesUpsert": [
+      {
+        "id": "f1",
+        "parentId": null,
+        "kind": "module",
+        "name": "<module>",
+        "qualifiedName": "<module>",
+        "definitionLine": null,
+        "callSite": null,
+        "parameterNames": [],
+        "localsSource": "globals",
+        "locals": []
+      }
+    ],
+    "framesRemove": [],
+    "objectsUpsert": [],
+    "objectsRemove": []
+  }
+}

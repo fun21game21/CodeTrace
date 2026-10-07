@@ -1,0 +1,19 @@
+{
+  "index": 0,
+  "kind": "RETURN",
+  "stateVersion": 1,
+  "frameId": "f1",
+  "source": {
+    "fileName": "<codetrace-user>",
+    "lineNumber": 1
+  },
+  "consoleOffset": 0,
+  "payload": {
+    "returnValueKnown": true,
+    "returnValue": {
+      "kind": "scalar",
+      "type": "int",
+      "value": "9007199254740993"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+**
+!pyproject.toml
+!contracts/
+!contracts/python/
+!contracts/python/**
+!contracts/*.schema.json
+!contracts/defaults.json
+!runner/
+!runner/codetrace_runner/
+!runner/codetrace_runner/**
+!runner/requirements-runtime.lock
+!backend/
+!backend/codetrace_backend/
+!backend/codetrace_backend/**
+**/__pycache__
+**/*.pyc
+**/.DS_Store

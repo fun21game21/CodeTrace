@@ -1,0 +1,1544 @@
+[
+  {
+    "file": "valid/value-none.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-bool.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-int.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-int-negative.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-int-zero.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-str.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-float.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-float-nan.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-float-inf.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-float-negative-inf.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-float-negative-zero.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-float-exponent.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-float-subnormal.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/value-ref.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": true
+  },
+  {
+    "file": "valid/object-list.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-list-cycle.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-tuple.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-dict.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-set.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-deque.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-deque-bounded.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-instance.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-opaque.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-opaque-class.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/object-opaque-symbol.json",
+    "contract": "trace",
+    "definition": "ObjectRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/frame-module.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": true
+  },
+  {
+    "file": "valid/frame-function.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": true
+  },
+  {
+    "file": "valid/frame-class.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": true
+  },
+  {
+    "file": "valid/state-empty.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": true
+  },
+  {
+    "file": "valid/state-cycle-alias.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": true
+  },
+  {
+    "file": "valid/state-mutual-cycle.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": true
+  },
+  {
+    "file": "valid/state-unicode-bindings.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": true
+  },
+  {
+    "file": "valid/checkpoint-zero.json",
+    "contract": "trace",
+    "definition": "Checkpoint",
+    "valid": true
+  },
+  {
+    "file": "valid/checkpoint-state.json",
+    "contract": "trace",
+    "definition": "StateRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/delta.json",
+    "contract": "trace",
+    "definition": "Delta",
+    "valid": true
+  },
+  {
+    "file": "valid/state-delta.json",
+    "contract": "trace",
+    "definition": "StateDelta",
+    "valid": true
+  },
+  {
+    "file": "valid/delta-removal.json",
+    "contract": "trace",
+    "definition": "StateRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/console-stdout.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": true
+  },
+  {
+    "file": "valid/console-stderr.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": true
+  },
+  {
+    "file": "valid/console-input.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": true
+  },
+  {
+    "file": "valid/diagnostic-runtime.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": true
+  },
+  {
+    "file": "valid/diagnostic-observed.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": true
+  },
+  {
+    "file": "valid/diagnostic-limit.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": true
+  },
+  {
+    "file": "valid/diagnostic-infrastructure.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": true
+  },
+  {
+    "file": "valid/diagnostic-syntax.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": true
+  },
+  {
+    "file": "valid/completion-success.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": true
+  },
+  {
+    "file": "valid/completion-user-error.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": true
+  },
+  {
+    "file": "valid/completion-limit.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": true
+  },
+  {
+    "file": "valid/completion-system-error.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": true
+  },
+  {
+    "file": "valid/completion-interrupted.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": true
+  },
+  {
+    "file": "valid/event-line.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/event-call.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/event-return.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/event-exception.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/event-run_end.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/event-return-unknown.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/event-call-unknown-line.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/event-call-null-source.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": true
+  },
+  {
+    "file": "valid/trace-minimal-success.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/trace-syntax-error-before-execution.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/trace-limit-prefix.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/resource-limits-defaults.json",
+    "contract": "trace",
+    "definition": "ResourceLimits",
+    "valid": true
+  },
+  {
+    "file": "valid/uuid.json",
+    "contract": "trace",
+    "definition": "RunId",
+    "valid": true
+  },
+  {
+    "file": "valid/object-id.json",
+    "contract": "trace",
+    "definition": "ObjectId",
+    "valid": true
+  },
+  {
+    "file": "valid/frame-id.json",
+    "contract": "trace",
+    "definition": "FrameId",
+    "valid": true
+  },
+  {
+    "file": "valid/request-id.json",
+    "contract": "trace",
+    "definition": "RequestId",
+    "valid": true
+  },
+  {
+    "file": "valid/timestamp.json",
+    "contract": "trace",
+    "definition": "Timestamp",
+    "valid": true
+  },
+  {
+    "file": "valid/ws-socket_ready.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-start.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-run_accepted.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-run_rejected.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-status.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-console.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-input_request.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-input_response.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-input_accepted.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-input_rejected.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-run_finished.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-protocol_error.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-run-finished-unavailable.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/ws-input-empty.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-ready.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-start.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-trace_chunk.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-output.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-input_request.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-input_response.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-abort_request.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-finished.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-fatal.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-finished-user-error.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/transport-state.json",
+    "contract": "runner",
+    "definition": "TransportTraceRecord",
+    "valid": true
+  },
+  {
+    "file": "valid/transport-event.json",
+    "contract": "runner",
+    "definition": "TransportTraceRecord",
+    "valid": true
+  },
+  {
+    "file": "invalid/unknown-schema-version.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/wrong-schema-version-type.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-extra-field.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/wrong-python-version.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/uuid-malformed.json",
+    "contract": "trace",
+    "definition": "RunId",
+    "valid": false
+  },
+  {
+    "file": "invalid/object-id-zero.json",
+    "contract": "trace",
+    "definition": "ObjectId",
+    "valid": false
+  },
+  {
+    "file": "invalid/object-id-leading-zero.json",
+    "contract": "trace",
+    "definition": "ObjectId",
+    "valid": false
+  },
+  {
+    "file": "invalid/object-id-negative.json",
+    "contract": "trace",
+    "definition": "ObjectId",
+    "valid": false
+  },
+  {
+    "file": "invalid/object-id-wrong-prefix.json",
+    "contract": "trace",
+    "definition": "ObjectId",
+    "valid": false
+  },
+  {
+    "file": "invalid/object-id-newline.json",
+    "contract": "trace",
+    "definition": "ObjectId",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-id-zero.json",
+    "contract": "trace",
+    "definition": "FrameId",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-id-leading-zero.json",
+    "contract": "trace",
+    "definition": "FrameId",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-id-negative.json",
+    "contract": "trace",
+    "definition": "FrameId",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-id-wrong-prefix.json",
+    "contract": "trace",
+    "definition": "FrameId",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-id-newline.json",
+    "contract": "trace",
+    "definition": "FrameId",
+    "valid": false
+  },
+  {
+    "file": "invalid/ref-extra-field.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/ref-number.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/ref-wrong-property.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/value-multiple-variants.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/bare-null.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/bare-bool.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/none-wrong-nullable.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-plus-sign.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-leading-zero.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-negative-zero.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-negative-leading-zero.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-decimal-point.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-newline.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-empty.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-number.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-bool.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/int-null.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/bool-int.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/bool-string.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-uppercase-nan.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-infinity.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-negative-infinity.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-integer-text.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-exponent-no-sign.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-overflow.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-nan-newline.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-newline.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-empty.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/float-number.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/invalid-value-type.json",
+    "contract": "trace",
+    "definition": "Value",
+    "valid": false
+  },
+  {
+    "file": "invalid/event-index-string.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/event-index-bool.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/event-index-fraction.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/event-negative-state-version.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/event-invalid-event-enum.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/event-frame-null.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/event-line-source-null.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/line-number-null.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/line-number-zero.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/run-end-frame.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/run-end-source.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/run-end-payload.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/return-unknown-with-value.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/return-known-none.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/exception-wrong-code.json",
+    "contract": "trace",
+    "definition": "TraceEvent",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Frame-parentId.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Frame-definitionLine.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Frame-callSite.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-ConsoleEntry-requestId.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Diagnostic-typeName.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Diagnostic-source.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Diagnostic-columnNumber.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Completion-primaryDiagnostic.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-Completion-exitCode.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-StateDelta-globals.json",
+    "contract": "trace",
+    "definition": "StateDelta",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-StateDelta-stack.json",
+    "contract": "trace",
+    "definition": "StateDelta",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-StateDelta-eventRoots.json",
+    "contract": "trace",
+    "definition": "StateDelta",
+    "valid": false
+  },
+  {
+    "file": "invalid/missing-nullable-DequeObject-maxlen.json",
+    "contract": "trace",
+    "definition": "DequeObject",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-invalid-nullable.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-module-own.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": false
+  },
+  {
+    "file": "invalid/frame-module-locals.json",
+    "contract": "trace",
+    "definition": "Frame",
+    "valid": false
+  },
+  {
+    "file": "invalid/console-invalid-nullable.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": false
+  },
+  {
+    "file": "invalid/console-empty.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": false
+  },
+  {
+    "file": "invalid/console-input-without-request.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": false
+  },
+  {
+    "file": "invalid/console-input-without-newline.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": false
+  },
+  {
+    "file": "invalid/console-stdout-request.json",
+    "contract": "trace",
+    "definition": "ConsoleEntry",
+    "valid": false
+  },
+  {
+    "file": "invalid/diagnostic-runtime-column.json",
+    "contract": "trace",
+    "definition": "Diagnostic",
+    "valid": false
+  },
+  {
+    "file": "invalid/completion-reason-observed.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/completion-invalid-enum.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/completion-success-incomplete.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/completion-success-not-cleaned.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/completion-limit-complete.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/completion-user-error-none.json",
+    "contract": "trace",
+    "definition": "Completion",
+    "valid": false
+  },
+  {
+    "file": "invalid/timestamp-non-utc.json",
+    "contract": "trace",
+    "definition": "Timestamp",
+    "valid": false
+  },
+  {
+    "file": "invalid/timestamp-february-30.json",
+    "contract": "trace",
+    "definition": "Timestamp",
+    "valid": false
+  },
+  {
+    "file": "invalid/timestamp-newline.json",
+    "contract": "trace",
+    "definition": "Timestamp",
+    "valid": false
+  },
+  {
+    "file": "invalid/state-nonempty-zero.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": false
+  },
+  {
+    "file": "invalid/state-unresolved-ref.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": false
+  },
+  {
+    "file": "invalid/state-duplicate-object.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": false
+  },
+  {
+    "file": "invalid/state-missing-stack-frame.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": false
+  },
+  {
+    "file": "invalid/state-parent-cycle.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": false
+  },
+  {
+    "file": "invalid/state-unsorted-bindings.json",
+    "contract": "trace",
+    "definition": "NormalizedState",
+    "valid": false
+  },
+  {
+    "file": "invalid/checkpoint-version-mismatch.json",
+    "contract": "trace",
+    "definition": "Checkpoint",
+    "valid": false
+  },
+  {
+    "file": "invalid/delta-base-mismatch.json",
+    "contract": "trace",
+    "definition": "Delta",
+    "valid": false
+  },
+  {
+    "file": "invalid/delta-zero-version.json",
+    "contract": "trace",
+    "definition": "Delta",
+    "valid": false
+  },
+  {
+    "file": "invalid/delta-conflicting-frame-id.json",
+    "contract": "trace",
+    "definition": "StateDelta",
+    "valid": false
+  },
+  {
+    "file": "invalid/delta-empty-change.json",
+    "contract": "trace",
+    "definition": "Delta",
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-no-run-end.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-run-end-not-last.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-two-run-end.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-state-versions-gap.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-event-index-gap.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-unresolved-state-version.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-console-offset-overflow.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/trace-checkpoint-interval-mismatch.json",
+    "contract": "trace",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/limits-missing-field.json",
+    "contract": "trace",
+    "definition": "ResourceLimits",
+    "valid": false
+  },
+  {
+    "file": "invalid/limits-negative.json",
+    "contract": "trace",
+    "definition": "ResourceLimits",
+    "valid": false
+  },
+  {
+    "file": "invalid/limits-bool.json",
+    "contract": "trace",
+    "definition": "ResourceLimits",
+    "valid": false
+  },
+  {
+    "file": "invalid/limits-extra-field.json",
+    "contract": "trace",
+    "definition": "ResourceLimits",
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-unknown-version.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-seq-zero.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-seq-negative.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-seq-fraction.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-seq-string.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-seq-bool.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-seq-null.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-unknown-type.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-missing-payload.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-missing-run-id.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-extra-envelope.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-payload-null.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-wrong-payload.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-input-lf.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-input-cr.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-unknown-version.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-seq-zero.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-seq-negative.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-seq-fraction.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-seq-string.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-seq-bool.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-seq-null.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-unknown-type.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-missing-payload.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-missing-run-id.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-extra-envelope.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-payload-null.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-wrong-payload.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-input-lf.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-input-cr.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-start-run-id-not-null.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-accepted-run-id-null.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-invalid-run-uuid.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-missing-nullable-trace-url.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-invalid-nullable-trace-bytes.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-available-null-url.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-run-id-null.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-transport-run-end.json",
+    "contract": "runner",
+    "definition": "TransportTraceRecord",
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-wrong-transport-kind.json",
+    "contract": "runner",
+    "definition": "TransportTraceRecord",
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-invalid-finished-outcome.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-missing-nullable-diagnostic.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-unknown-payload-version.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/uuid-urn.json",
+    "contract": "trace",
+    "definition": "RunId",
+    "valid": false
+  },
+  {
+    "file": "invalid/uuid-newline.json",
+    "contract": "trace",
+    "definition": "RunId",
+    "valid": false
+  },
+  {
+    "file": "invalid/uuid-without-hyphens.json",
+    "contract": "trace",
+    "definition": "RunId",
+    "valid": false
+  },
+  {
+    "file": "invalid/ws-bool-version.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "invalid/runner-bool-version.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": false
+  },
+  {
+    "file": "valid/uuid-uppercase.json",
+    "contract": "trace",
+    "definition": "RunId",
+    "valid": true
+  },
+  {
+    "file": "valid/ws-input-lone-surrogate.json",
+    "contract": "ws",
+    "definition": null,
+    "valid": true
+  },
+  {
+    "file": "valid/runner-input-lone-surrogate.json",
+    "contract": "runner",
+    "definition": null,
+    "valid": true
+  }
+]

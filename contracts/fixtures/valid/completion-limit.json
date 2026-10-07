@@ -1,0 +1,22 @@
+{
+  "outcome": "LIMIT_EXCEEDED",
+  "reason": "ACTIVE_TIMEOUT",
+  "traceComplete": false,
+  "stateAccuracy": "last_observed",
+  "primaryDiagnostic": {
+    "category": "limit",
+    "code": "ACTIVE_TIMEOUT",
+    "typeName": null,
+    "message": "bad value",
+    "source": null,
+    "columnNumber": null,
+    "traceback": [],
+    "omittedTracebackFrames": 0
+  },
+  "acceptedAt": "2026-10-05T15:00:00.000Z",
+  "finishedAt": "2026-10-05T15:00:00.125Z",
+  "activeElapsedMs": 125.25,
+  "waitingElapsedMs": 0,
+  "exitCode": null,
+  "cleanupConfirmed": true
+}

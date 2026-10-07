@@ -1,0 +1,25 @@
+{
+  "apiVersion": 1,
+  "seq": 1,
+  "type": "run_finished",
+  "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+  "payload": {
+    "completion": {
+      "outcome": "SUCCESS",
+      "reason": "NONE",
+      "traceComplete": true,
+      "stateAccuracy": "final",
+      "primaryDiagnostic": null,
+      "acceptedAt": "2026-10-05T15:00:00.000Z",
+      "finishedAt": "2026-10-05T15:00:00.125Z",
+      "activeElapsedMs": 125.25,
+      "waitingElapsedMs": 0,
+      "exitCode": 0,
+      "cleanupConfirmed": true
+    },
+    "traceAvailable": true,
+    "traceUrl": null,
+    "traceBytes": 1000,
+    "eventCount": 3
+  }
+}

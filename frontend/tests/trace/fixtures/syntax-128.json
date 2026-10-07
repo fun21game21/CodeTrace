@@ -1,0 +1,160 @@
+{
+  "name": "syntax",
+  "oracle": "RUNNER_IO wire + ENCODER independent decoder",
+  "trace": {
+    "schemaVersion": "1.0",
+    "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+    "sourceCode": "if :",
+    "sourceFileName": "<codetrace-user>",
+    "pythonVersion": "3.13.16",
+    "checkpointInterval": 128,
+    "limits": {
+      "active_runs": 1,
+      "retained_results": 1,
+      "code_bytes": 65536,
+      "max_events": 100000,
+      "trace_bytes": 52428800,
+      "terminal_reserve_bytes": 2097152,
+      "registry_objects": 10000,
+      "state_objects": 2000,
+      "state_bytes": 1048576,
+      "collection_items": 1000,
+      "instance_attributes": 1000,
+      "string_bytes": 16384,
+      "integer_decimal_digits": 1000,
+      "active_frames": 128,
+      "console_bytes": 65536,
+      "output_chunk_bytes": 4096,
+      "input_value_bytes": 8192,
+      "input_requests": 32,
+      "checkpoint_interval": 128,
+      "active_timeout_ms": 10000,
+      "input_idle_timeout_ms": 120000,
+      "container_lifetime_ms": 300000,
+      "startup_timeout_ms": 15000,
+      "result_ttl_ms": 300000,
+      "cleanup_command_timeout_ms": 3000,
+      "cleanup_attempts": 2,
+      "finalization_timeout_ms": 120000,
+      "watchdog_tick_ms": 50,
+      "memory_bytes": 536870912,
+      "memory_plus_swap_bytes": 536870912,
+      "cpus": 1.0,
+      "pids_limit": 16,
+      "tmpfs_bytes": 16777216,
+      "runner_message_bytes": 2097152,
+      "ws_message_bytes": 524288,
+      "native_stderr_bytes": 16384,
+      "history_entries": 100,
+      "max_visual_nodes": 200,
+      "visible_array_items": 200
+    },
+    "events": [
+      {
+        "index": 0,
+        "kind": "RUN_END",
+        "stateVersion": 0,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 0,
+        "payload": {}
+      }
+    ],
+    "states": [
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [],
+          "globals": [],
+          "objects": [],
+          "stack": [],
+          "version": 0
+        },
+        "version": 0
+      }
+    ],
+    "console": [],
+    "completion": {
+      "outcome": "USER_ERROR",
+      "reason": "SYNTAX_ERROR",
+      "traceComplete": true,
+      "stateAccuracy": "unavailable",
+      "primaryDiagnostic": {
+        "category": "syntax",
+        "code": "SYNTAX_ERROR",
+        "columnNumber": 4,
+        "message": "invalid syntax",
+        "omittedTracebackFrames": 0,
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "traceback": [],
+        "typeName": "SyntaxError"
+      },
+      "acceptedAt": "2026-10-05T15:00:00.000Z",
+      "finishedAt": "2026-10-05T15:00:00.125Z",
+      "activeElapsedMs": 125.25,
+      "waitingElapsedMs": 0,
+      "exitCode": 0,
+      "cleanupConfirmed": true
+    }
+  },
+  "expected": [
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [],
+        "globals": [],
+        "objects": [],
+        "stack": [],
+        "version": 0
+      },
+      "event": {
+        "index": 0,
+        "kind": "RUN_END",
+        "stateVersion": 0,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 0,
+        "payload": {}
+      },
+      "globals": [],
+      "selectedFrameId": null,
+      "selectedLocals": [],
+      "callStack": [],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "error"
+      },
+      "eventDiagnostic": null,
+      "completion": {
+        "outcome": "USER_ERROR",
+        "reason": "SYNTAX_ERROR",
+        "traceComplete": true,
+        "stateAccuracy": "unavailable",
+        "primaryDiagnostic": {
+          "category": "syntax",
+          "code": "SYNTAX_ERROR",
+          "columnNumber": 4,
+          "message": "invalid syntax",
+          "omittedTracebackFrames": 0,
+          "source": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 1
+          },
+          "traceback": [],
+          "typeName": "SyntaxError"
+        },
+        "acceptedAt": "2026-10-05T15:00:00.000Z",
+        "finishedAt": "2026-10-05T15:00:00.125Z",
+        "activeElapsedMs": 125.25,
+        "waitingElapsedMs": 0,
+        "exitCode": 0,
+        "cleanupConfirmed": true
+      }
+    }
+  ]
+}

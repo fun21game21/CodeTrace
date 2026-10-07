@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "seq": 1,
+  "type": "finished",
+  "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+  "payload": {
+    "outcome": "SUCCESS",
+    "reason": "NONE",
+    "finalStateVersion": 2
+  }
+}

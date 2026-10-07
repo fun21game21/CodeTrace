@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "contracts/typescript/**/*.ts",
+    "contracts/tests/typescript/**/*.ts",
+    "frontend/src/**/*.ts",
+    "frontend/tests/**/*.ts",
+    "frontend/src/**/*.tsx",
+    "frontend/vite.config.ts",
+    "frontend/benchmarks/*.ts",
+    "frontend/benchmarks/*.tsx"
+  ]
+}

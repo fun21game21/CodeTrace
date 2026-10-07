@@ -1,0 +1,18 @@
+{
+  "id": "o1",
+  "kind": "dict",
+  "entries": [
+    {
+      "key": {
+        "kind": "scalar",
+        "type": "int",
+        "value": "9007199254740993"
+      },
+      "value": {
+        "kind": "scalar",
+        "type": "str",
+        "value": "\ud800\ud83d\ude00 __proto__"
+      }
+    }
+  ]
+}

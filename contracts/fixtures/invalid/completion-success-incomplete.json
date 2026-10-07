@@ -1,0 +1,13 @@
+{
+  "outcome": "SUCCESS",
+  "reason": "NONE",
+  "traceComplete": false,
+  "stateAccuracy": "final",
+  "primaryDiagnostic": null,
+  "acceptedAt": "2026-10-05T15:00:00.000Z",
+  "finishedAt": "2026-10-05T15:00:00.125Z",
+  "activeElapsedMs": 125.25,
+  "waitingElapsedMs": 0,
+  "exitCode": 0,
+  "cleanupConfirmed": true
+}

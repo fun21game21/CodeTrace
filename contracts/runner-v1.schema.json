@@ -1,0 +1,443 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codetrace.local/contracts/runner-v1.schema.json",
+  "$ref": "#/$defs/RunnerMessage",
+  "$defs": {
+    "TransportTraceRecord": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "state"
+            },
+            "record": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/StateRecord"
+            }
+          },
+          "required": ["kind", "record"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "event"
+            },
+            "record": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/PythonTraceEvent"
+            }
+          },
+          "required": ["kind", "record"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ready": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "ready"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "pythonVersion": {
+              "const": "3.13.16"
+            },
+            "protocolVersion": {
+              "const": 1
+            }
+          },
+          "required": ["pythonVersion", "protocolVersion"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "start": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "start"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "sourceFileName": {
+              "const": "<codetrace-user>"
+            },
+            "limits": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/ResourceLimits"
+            },
+            "checkpointInterval": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "code",
+            "sourceFileName",
+            "limits",
+            "checkpointInterval"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "trace_chunk": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "trace_chunk"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "records": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/TransportTraceRecord"
+              }
+            }
+          },
+          "required": ["records"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "output"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "entry": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/ConsoleEntry"
+            }
+          },
+          "required": ["entry"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "input_request": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "input_request"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RequestId"
+            },
+            "prompt": {
+              "type": "string"
+            },
+            "consoleOffset": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": ["requestId", "prompt", "consoleOffset"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "input_response": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "input_response"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RequestId"
+            },
+            "text": {
+              "type": "string",
+              "pattern": "^[^\\r\\n]*$(?![\\s\\S])"
+            }
+          },
+          "required": ["requestId", "text"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "abort_request": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "abort_request"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "type": "string",
+              "enum": [
+                "ACTIVE_TIMEOUT",
+                "INPUT_IDLE_TIMEOUT",
+                "CONTAINER_LIFETIME",
+                "STARTUP_TIMEOUT",
+                "MEMORY_LIMIT",
+                "EVENT_LIMIT",
+                "TRACE_BYTES_LIMIT",
+                "REGISTRY_LIMIT",
+                "STATE_BYTES_LIMIT",
+                "COLLECTION_LIMIT",
+                "STRING_LIMIT",
+                "INT_DIGITS_LIMIT",
+                "CONSOLE_LIMIT",
+                "FRAME_LIMIT",
+                "INPUT_REQUEST_LIMIT",
+                "RUNNER_FAILURE"
+              ]
+            },
+            "diagnostic": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/Diagnostic"
+            }
+          },
+          "required": ["reason", "diagnostic"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "finished": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "finished"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "outcome": {
+                  "const": "SUCCESS"
+                },
+                "reason": {
+                  "const": "NONE"
+                },
+                "primaryDiagnostic": {
+                  "const": null
+                },
+                "finalStateVersion": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "outcome",
+                "reason",
+                "primaryDiagnostic",
+                "finalStateVersion"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "outcome": {
+                  "const": "USER_ERROR"
+                },
+                "reason": {
+                  "type": "string",
+                  "enum": [
+                    "SYNTAX_ERROR",
+                    "UNCAUGHT_EXCEPTION",
+                    "UNSUPPORTED_FEATURE"
+                  ]
+                },
+                "primaryDiagnostic": {
+                  "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/Diagnostic"
+                },
+                "finalStateVersion": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "outcome",
+                "reason",
+                "primaryDiagnostic",
+                "finalStateVersion"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "fatal": {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "const": "fatal"
+        },
+        "runId": {
+          "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/RunId"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "const": "RUNNER_FAILURE"
+            },
+            "diagnostic": {
+              "$ref": "https://codetrace.local/contracts/trace-v1.schema.json#/$defs/Diagnostic"
+            }
+          },
+          "required": ["reason", "diagnostic"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["protocolVersion", "seq", "type", "runId", "payload"],
+      "additionalProperties": false
+    },
+    "RunnerMessage": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/ready"
+        },
+        {
+          "$ref": "#/$defs/start"
+        },
+        {
+          "$ref": "#/$defs/trace_chunk"
+        },
+        {
+          "$ref": "#/$defs/output"
+        },
+        {
+          "$ref": "#/$defs/input_request"
+        },
+        {
+          "$ref": "#/$defs/input_response"
+        },
+        {
+          "$ref": "#/$defs/abort_request"
+        },
+        {
+          "$ref": "#/$defs/finished"
+        },
+        {
+          "$ref": "#/$defs/fatal"
+        }
+      ]
+    }
+  }
+}

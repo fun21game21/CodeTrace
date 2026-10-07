@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "globals": [
+    {
+      "name": "b",
+      "value": {
+        "$ref": "o1"
+      }
+    },
+    {
+      "name": "a",
+      "value": {
+        "$ref": "o1"
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "f1",
+      "parentId": null,
+      "kind": "module",
+      "name": "<module>",
+      "qualifiedName": "<module>",
+      "definitionLine": null,
+      "callSite": null,
+      "parameterNames": [],
+      "localsSource": "globals",
+      "locals": []
+    }
+  ],
+  "stack": ["f1"],
+  "objects": [
+    {
+      "id": "o1",
+      "kind": "list",
+      "items": [
+        {
+          "$ref": "o1"
+        }
+      ]
+    }
+  ],
+  "eventRoots": []
+}

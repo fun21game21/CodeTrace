@@ -1,0 +1,21 @@
+{
+  "id": "f1",
+  "parentId": null,
+  "kind": "module",
+  "name": "<module>",
+  "qualifiedName": "<module>",
+  "definitionLine": null,
+  "callSite": null,
+  "parameterNames": [],
+  "localsSource": "globals",
+  "locals": [
+    {
+      "name": "a",
+      "value": {
+        "kind": "scalar",
+        "type": "none",
+        "value": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "protocolVersion": 1,
+  "seq": 1,
+  "type": "trace_chunk",
+  "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+  "payload": {
+    "records": [
+      {
+        "kind": "state",
+        "record": {
+          "kind": "checkpoint",
+          "version": 0,
+          "state": {
+            "version": 0,
+            "globals": [],
+            "frames": [],
+            "stack": [],
+            "objects": [],
+            "eventRoots": []
+          }
+        }
+      },
+      {
+        "kind": "state",
+        "record": {
+          "kind": "delta",
+          "version": 1,
+          "baseVersion": 0,
+          "changes": {
+            "globals": null,
+            "stack": ["f1"],
+            "eventRoots": null,
+            "framesUpsert": [
+              {
+                "id": "f1",
+                "parentId": null,
+                "kind": "module",
+                "name": "<module>",
+                "qualifiedName": "<module>",
+                "definitionLine": null,
+                "callSite": null,
+                "parameterNames": [],
+                "localsSource": "globals",
+                "locals": []
+              }
+            ],
+            "framesRemove": [],
+            "objectsUpsert": [],
+            "objectsRemove": []
+          }
+        }
+      },
+      {
+        "kind": "event",
+        "record": {
+          "index": 0,
+          "kind": "CALL",
+          "stateVersion": 1,
+          "frameId": "f1",
+          "source": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": null
+          },
+          "consoleOffset": 0,
+          "payload": {}
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,667 @@
+{
+  "name": "console",
+  "oracle": "RUNNER_IO wire + ENCODER independent decoder; synthetic stderr",
+  "trace": {
+    "schemaVersion": "1.0",
+    "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+    "sourceCode": "print('A',end='')\nprint('B')\nprint('C')",
+    "sourceFileName": "<codetrace-user>",
+    "pythonVersion": "3.13.16",
+    "checkpointInterval": 2,
+    "limits": {
+      "active_runs": 1,
+      "retained_results": 1,
+      "code_bytes": 65536,
+      "max_events": 100000,
+      "trace_bytes": 52428800,
+      "terminal_reserve_bytes": 2097152,
+      "registry_objects": 10000,
+      "state_objects": 2000,
+      "state_bytes": 1048576,
+      "collection_items": 1000,
+      "instance_attributes": 1000,
+      "string_bytes": 16384,
+      "integer_decimal_digits": 1000,
+      "active_frames": 128,
+      "console_bytes": 65536,
+      "output_chunk_bytes": 4096,
+      "input_value_bytes": 8192,
+      "input_requests": 32,
+      "checkpoint_interval": 2,
+      "active_timeout_ms": 10000,
+      "input_idle_timeout_ms": 120000,
+      "container_lifetime_ms": 300000,
+      "startup_timeout_ms": 15000,
+      "result_ttl_ms": 300000,
+      "cleanup_command_timeout_ms": 3000,
+      "cleanup_attempts": 2,
+      "finalization_timeout_ms": 120000,
+      "watchdog_tick_ms": 50,
+      "memory_bytes": 536870912,
+      "memory_plus_swap_bytes": 536870912,
+      "cpus": 1.0,
+      "pids_limit": 16,
+      "tmpfs_bytes": 16777216,
+      "runner_message_bytes": 2097152,
+      "ws_message_bytes": 524288,
+      "native_stderr_bytes": 16384,
+      "history_entries": 100,
+      "max_visual_nodes": 200,
+      "visible_array_items": 200
+    },
+    "events": [
+      {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 0,
+        "kind": "CALL",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": null
+        },
+        "stateVersion": 1
+      },
+      {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 1,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "stateVersion": 1
+      },
+      {
+        "consoleOffset": 1,
+        "frameId": "f1",
+        "index": 2,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "stateVersion": 1
+      },
+      {
+        "consoleOffset": 3,
+        "frameId": "f1",
+        "index": 3,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "stateVersion": 1
+      },
+      {
+        "consoleOffset": 5,
+        "frameId": "f1",
+        "index": 4,
+        "kind": "RETURN",
+        "payload": {
+          "returnValue": null,
+          "returnValueKnown": false
+        },
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "stateVersion": 1
+      },
+      {
+        "index": 5,
+        "kind": "RUN_END",
+        "stateVersion": 2,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 6,
+        "payload": {}
+      }
+    ],
+    "states": [
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [],
+          "globals": [],
+          "objects": [],
+          "stack": [],
+          "version": 0
+        },
+        "version": 0
+      },
+      {
+        "baseVersion": 0,
+        "changes": {
+          "eventRoots": null,
+          "framesRemove": [],
+          "framesUpsert": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            }
+          ],
+          "globals": null,
+          "objectsRemove": [],
+          "objectsUpsert": [],
+          "stack": ["f1"]
+        },
+        "kind": "delta",
+        "version": 1
+      },
+      {
+        "kind": "checkpoint",
+        "state": {
+          "eventRoots": [],
+          "frames": [],
+          "globals": [],
+          "objects": [],
+          "stack": [],
+          "version": 2
+        },
+        "version": 2
+      }
+    ],
+    "console": [
+      {
+        "index": 0,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "A"
+      },
+      {
+        "index": 1,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "B"
+      },
+      {
+        "index": 2,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "\n"
+      },
+      {
+        "index": 3,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "C"
+      },
+      {
+        "index": 4,
+        "kind": "stdout",
+        "requestId": null,
+        "text": "\n"
+      },
+      {
+        "index": 5,
+        "kind": "stderr",
+        "text": "E",
+        "requestId": null
+      }
+    ],
+    "completion": {
+      "outcome": "SUCCESS",
+      "reason": "NONE",
+      "traceComplete": true,
+      "stateAccuracy": "final",
+      "primaryDiagnostic": null,
+      "acceptedAt": "2026-10-05T15:00:00.000Z",
+      "finishedAt": "2026-10-05T15:00:00.125Z",
+      "activeElapsedMs": 125.25,
+      "waitingElapsedMs": 0,
+      "exitCode": 0,
+      "cleanupConfirmed": true
+    }
+  },
+  "expected": [
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 1
+      },
+      "event": {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 0,
+        "kind": "CALL",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": null
+        },
+        "stateVersion": 1
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": null,
+        "mode": "none"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 1
+      },
+      "event": {
+        "consoleOffset": 0,
+        "frameId": "f1",
+        "index": 1,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "stateVersion": 1
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 1
+      },
+      "event": {
+        "consoleOffset": 1,
+        "frameId": "f1",
+        "index": 2,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "stateVersion": 1
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "A"
+        }
+      ],
+      "highlight": {
+        "lineNumber": 2,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 1
+      },
+      "event": {
+        "consoleOffset": 3,
+        "frameId": "f1",
+        "index": 3,
+        "kind": "LINE",
+        "payload": {},
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "stateVersion": 1
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "A"
+        },
+        {
+          "index": 1,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "B"
+        },
+        {
+          "index": 2,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        }
+      ],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [],
+        "objects": [],
+        "stack": ["f1"],
+        "version": 1
+      },
+      "event": {
+        "consoleOffset": 5,
+        "frameId": "f1",
+        "index": 4,
+        "kind": "RETURN",
+        "payload": {
+          "returnValue": null,
+          "returnValueKnown": false
+        },
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "stateVersion": 1
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "A"
+        },
+        {
+          "index": 1,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "B"
+        },
+        {
+          "index": 2,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        },
+        {
+          "index": 3,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "C"
+        },
+        {
+          "index": 4,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        }
+      ],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "eventRoots": [],
+        "frames": [],
+        "globals": [],
+        "objects": [],
+        "stack": [],
+        "version": 2
+      },
+      "event": {
+        "index": 5,
+        "kind": "RUN_END",
+        "stateVersion": 2,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 6,
+        "payload": {}
+      },
+      "globals": [],
+      "selectedFrameId": null,
+      "selectedLocals": [],
+      "callStack": [],
+      "consoleEntries": [
+        {
+          "index": 0,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "A"
+        },
+        {
+          "index": 1,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "B"
+        },
+        {
+          "index": 2,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        },
+        {
+          "index": 3,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "C"
+        },
+        {
+          "index": 4,
+          "kind": "stdout",
+          "requestId": null,
+          "text": "\n"
+        },
+        {
+          "index": 5,
+          "kind": "stderr",
+          "text": "E",
+          "requestId": null
+        }
+      ],
+      "highlight": {
+        "lineNumber": null,
+        "mode": "none"
+      },
+      "eventDiagnostic": null,
+      "completion": {
+        "outcome": "SUCCESS",
+        "reason": "NONE",
+        "traceComplete": true,
+        "stateAccuracy": "final",
+        "primaryDiagnostic": null,
+        "acceptedAt": "2026-10-05T15:00:00.000Z",
+        "finishedAt": "2026-10-05T15:00:00.125Z",
+        "activeElapsedMs": 125.25,
+        "waitingElapsedMs": 0,
+        "exitCode": 0,
+        "cleanupConfirmed": true
+      }
+    }
+  ]
+}

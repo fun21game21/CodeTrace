@@ -1,0 +1,17 @@
+{
+  "category": "runtime",
+  "code": "UNCAUGHT_EXCEPTION",
+  "typeName": "ValueError",
+  "message": "bad value",
+  "columnNumber": null,
+  "traceback": [
+    {
+      "name": "visit",
+      "source": {
+        "fileName": "<codetrace-user>",
+        "lineNumber": 1
+      }
+    }
+  ],
+  "omittedTracebackFrames": 0
+}

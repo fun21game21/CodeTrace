@@ -1,0 +1,14 @@
+{
+  "id": "o1",
+  "kind": "tuple",
+  "items": [
+    {
+      "$ref": "o1"
+    },
+    {
+      "kind": "scalar",
+      "type": "none",
+      "value": null
+    }
+  ]
+}

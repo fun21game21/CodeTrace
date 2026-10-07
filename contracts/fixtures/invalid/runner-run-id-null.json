@@ -1,0 +1,10 @@
+{
+  "protocolVersion": 1,
+  "seq": 1,
+  "type": "ready",
+  "runId": null,
+  "payload": {
+    "pythonVersion": "3.13.16",
+    "protocolVersion": 1
+  }
+}

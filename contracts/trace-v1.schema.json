@@ -1,0 +1,1731 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codetrace.local/contracts/trace-v1.schema.json",
+  "$ref": "#/$defs/TraceDocument",
+  "$defs": {
+    "RunId": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$(?![\\s\\S])"
+    },
+    "ObjectId": {
+      "type": "string",
+      "pattern": "^o[1-9][0-9]*$(?![\\s\\S])"
+    },
+    "FrameId": {
+      "type": "string",
+      "pattern": "^f[1-9][0-9]*$(?![\\s\\S])"
+    },
+    "RequestId": {
+      "type": "string",
+      "pattern": "^q[1-9][0-9]*$(?![\\s\\S])"
+    },
+    "Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$(?![\\s\\S])"
+    },
+    "RunStatus": {
+      "type": "string",
+      "enum": [
+        "STARTING",
+        "RUNNING",
+        "WAITING_INPUT",
+        "FINALIZING",
+        "SUCCEEDED",
+        "FAILED",
+        "LIMIT_EXCEEDED",
+        "INTERRUPTED"
+      ]
+    },
+    "ReasonCode": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "SYNTAX_ERROR",
+        "UNCAUGHT_EXCEPTION",
+        "UNSUPPORTED_FEATURE",
+        "ACTIVE_TIMEOUT",
+        "INPUT_IDLE_TIMEOUT",
+        "CONTAINER_LIFETIME",
+        "STARTUP_TIMEOUT",
+        "MEMORY_LIMIT",
+        "EVENT_LIMIT",
+        "TRACE_BYTES_LIMIT",
+        "REGISTRY_LIMIT",
+        "STATE_BYTES_LIMIT",
+        "COLLECTION_LIMIT",
+        "STRING_LIMIT",
+        "INT_DIGITS_LIMIT",
+        "CONSOLE_LIMIT",
+        "FRAME_LIMIT",
+        "INPUT_REQUEST_LIMIT",
+        "DOCKER_UNAVAILABLE",
+        "IMAGE_UNAVAILABLE",
+        "CLIENT_PROTOCOL_ERROR",
+        "RUNNER_PROTOCOL_ERROR",
+        "RUNNER_FAILURE",
+        "TRACE_RECORDER_FAILURE",
+        "FINALIZATION_TIMEOUT",
+        "CLEANUP_FAILED",
+        "CONNECTION_LOST",
+        "BACKEND_SHUTDOWN"
+      ]
+    },
+    "LimitReasonCode": {
+      "type": "string",
+      "enum": [
+        "ACTIVE_TIMEOUT",
+        "INPUT_IDLE_TIMEOUT",
+        "CONTAINER_LIFETIME",
+        "STARTUP_TIMEOUT",
+        "MEMORY_LIMIT",
+        "EVENT_LIMIT",
+        "TRACE_BYTES_LIMIT",
+        "REGISTRY_LIMIT",
+        "STATE_BYTES_LIMIT",
+        "COLLECTION_LIMIT",
+        "STRING_LIMIT",
+        "INT_DIGITS_LIMIT",
+        "CONSOLE_LIMIT",
+        "FRAME_LIMIT",
+        "INPUT_REQUEST_LIMIT"
+      ]
+    },
+    "ApiValidationCode": {
+      "type": "string",
+      "enum": [
+        "RUN_BUSY",
+        "INVALID_START",
+        "CODE_TOO_LARGE",
+        "INVALID_INPUT",
+        "INPUT_ALREADY_ACCEPTED",
+        "RESULT_NOT_AVAILABLE"
+      ]
+    },
+    "SourceLocation": {
+      "type": "object",
+      "properties": {
+        "fileName": {
+          "const": "<codetrace-user>"
+        },
+        "lineNumber": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": ["fileName", "lineNumber"],
+      "additionalProperties": false
+    },
+    "Ref": {
+      "type": "object",
+      "properties": {
+        "$ref": {
+          "$ref": "#/$defs/ObjectId"
+        }
+      },
+      "required": ["$ref"],
+      "additionalProperties": false
+    },
+    "NoneValue": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "scalar"
+        },
+        "type": {
+          "const": "none"
+        },
+        "value": {
+          "const": null
+        }
+      },
+      "required": ["kind", "type", "value"],
+      "additionalProperties": false
+    },
+    "BoolValue": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "scalar"
+        },
+        "type": {
+          "const": "bool"
+        },
+        "value": {
+          "type": "boolean"
+        }
+      },
+      "required": ["kind", "type", "value"],
+      "additionalProperties": false
+    },
+    "IntValue": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "scalar"
+        },
+        "type": {
+          "const": "int"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^(0|-?[1-9][0-9]*)$(?![\\s\\S])"
+        }
+      },
+      "required": ["kind", "type", "value"],
+      "additionalProperties": false
+    },
+    "FloatValue": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "scalar"
+        },
+        "type": {
+          "const": "float"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^(nan|inf|-inf|-?(?:[0-9]+\\.[0-9]+(?:e[+-][0-9]+)?|[0-9]+e[+-][0-9]+))$(?![\\s\\S])"
+        }
+      },
+      "required": ["kind", "type", "value"],
+      "additionalProperties": false
+    },
+    "StrValue": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "scalar"
+        },
+        "type": {
+          "const": "str"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": ["kind", "type", "value"],
+      "additionalProperties": false
+    },
+    "Value": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/NoneValue"
+        },
+        {
+          "$ref": "#/$defs/BoolValue"
+        },
+        {
+          "$ref": "#/$defs/IntValue"
+        },
+        {
+          "$ref": "#/$defs/FloatValue"
+        },
+        {
+          "$ref": "#/$defs/StrValue"
+        },
+        {
+          "$ref": "#/$defs/Ref"
+        }
+      ]
+    },
+    "Binding": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/Value"
+        }
+      },
+      "required": ["name", "value"],
+      "additionalProperties": false
+    },
+    "DictEntry": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "#/$defs/Value"
+        },
+        "value": {
+          "$ref": "#/$defs/Value"
+        }
+      },
+      "required": ["key", "value"],
+      "additionalProperties": false
+    },
+    "ResourceLimits": {
+      "type": "object",
+      "properties": {
+        "active_runs": {
+          "const": 1,
+          "default": 1
+        },
+        "retained_results": {
+          "const": 1,
+          "default": 1
+        },
+        "code_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 65536
+        },
+        "max_events": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 100000
+        },
+        "trace_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 52428800
+        },
+        "terminal_reserve_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2097152
+        },
+        "registry_objects": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 10000
+        },
+        "state_objects": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2000
+        },
+        "state_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1048576
+        },
+        "collection_items": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1000
+        },
+        "instance_attributes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1000
+        },
+        "string_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 16384
+        },
+        "integer_decimal_digits": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1000
+        },
+        "active_frames": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 128
+        },
+        "console_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 65536
+        },
+        "output_chunk_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 4096
+        },
+        "input_value_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 8192
+        },
+        "input_requests": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 32
+        },
+        "checkpoint_interval": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 128
+        },
+        "active_timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 10000
+        },
+        "input_idle_timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 120000
+        },
+        "container_lifetime_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 300000
+        },
+        "startup_timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 15000
+        },
+        "result_ttl_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 300000
+        },
+        "cleanup_command_timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 3000
+        },
+        "cleanup_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2
+        },
+        "finalization_timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 120000
+        },
+        "watchdog_tick_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 50
+        },
+        "memory_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 536870912
+        },
+        "memory_plus_swap_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 536870912
+        },
+        "cpus": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 1.0
+        },
+        "pids_limit": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 16
+        },
+        "tmpfs_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 16777216
+        },
+        "runner_message_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2097152
+        },
+        "ws_message_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 524288
+        },
+        "native_stderr_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 16384
+        },
+        "history_entries": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 100
+        },
+        "max_visual_nodes": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 200
+        },
+        "visible_array_items": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 200
+        }
+      },
+      "required": [
+        "active_runs",
+        "retained_results",
+        "code_bytes",
+        "max_events",
+        "trace_bytes",
+        "terminal_reserve_bytes",
+        "registry_objects",
+        "state_objects",
+        "state_bytes",
+        "collection_items",
+        "instance_attributes",
+        "string_bytes",
+        "integer_decimal_digits",
+        "active_frames",
+        "console_bytes",
+        "output_chunk_bytes",
+        "input_value_bytes",
+        "input_requests",
+        "checkpoint_interval",
+        "active_timeout_ms",
+        "input_idle_timeout_ms",
+        "container_lifetime_ms",
+        "startup_timeout_ms",
+        "result_ttl_ms",
+        "cleanup_command_timeout_ms",
+        "cleanup_attempts",
+        "finalization_timeout_ms",
+        "watchdog_tick_ms",
+        "memory_bytes",
+        "memory_plus_swap_bytes",
+        "cpus",
+        "pids_limit",
+        "tmpfs_bytes",
+        "runner_message_bytes",
+        "ws_message_bytes",
+        "native_stderr_bytes",
+        "history_entries",
+        "max_visual_nodes",
+        "visible_array_items"
+      ],
+      "additionalProperties": false
+    },
+    "ListObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "kind": {
+          "const": "list"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Value"
+          }
+        }
+      },
+      "required": ["id", "kind", "items"],
+      "additionalProperties": false
+    },
+    "TupleObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "kind": {
+          "const": "tuple"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Value"
+          }
+        }
+      },
+      "required": ["id", "kind", "items"],
+      "additionalProperties": false
+    },
+    "SetObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "kind": {
+          "const": "set"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Value"
+          }
+        }
+      },
+      "required": ["id", "kind", "items"],
+      "additionalProperties": false
+    },
+    "DictObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "kind": {
+          "const": "dict"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DictEntry"
+          }
+        }
+      },
+      "required": ["id", "kind", "entries"],
+      "additionalProperties": false
+    },
+    "DequeObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "kind": {
+          "const": "deque"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Value"
+          }
+        },
+        "maxlen": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": ["id", "kind", "items", "maxlen"],
+      "additionalProperties": false
+    },
+    "InstanceObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "kind": {
+          "const": "instance"
+        },
+        "className": {
+          "type": "string"
+        },
+        "attrs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Binding"
+          }
+        }
+      },
+      "required": ["id", "kind", "className", "attrs"],
+      "additionalProperties": false
+    },
+    "OpaqueObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "kind": {
+          "const": "opaque"
+        },
+        "pythonType": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string",
+          "enum": ["unsupported_type", "unsupported_class", "builtin_symbol"]
+        }
+      },
+      "required": ["id", "kind", "pythonType", "reason"],
+      "additionalProperties": false
+    },
+    "ObjectRecord": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/ListObject"
+        },
+        {
+          "$ref": "#/$defs/TupleObject"
+        },
+        {
+          "$ref": "#/$defs/DictObject"
+        },
+        {
+          "$ref": "#/$defs/SetObject"
+        },
+        {
+          "$ref": "#/$defs/DequeObject"
+        },
+        {
+          "$ref": "#/$defs/InstanceObject"
+        },
+        {
+          "$ref": "#/$defs/OpaqueObject"
+        }
+      ]
+    },
+    "Frame": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/FrameId"
+        },
+        "parentId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FrameId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["module", "function", "class"]
+        },
+        "name": {
+          "type": "string"
+        },
+        "qualifiedName": {
+          "type": "string"
+        },
+        "definitionLine": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "callSite": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "parameterNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "localsSource": {
+          "type": "string",
+          "enum": ["own", "globals"]
+        },
+        "locals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Binding"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "parentId",
+        "kind",
+        "name",
+        "qualifiedName",
+        "definitionLine",
+        "callSite",
+        "parameterNames",
+        "localsSource",
+        "locals"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "module"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "localsSource": {
+                "const": "globals"
+              },
+              "parameterNames": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "localsSource": {
+                "const": "own"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "localsSource": {
+                "const": "globals"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "locals": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "class"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameterNames": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "NormalizedState": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "globals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Binding"
+          }
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Frame"
+          }
+        },
+        "stack": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FrameId"
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectRecord"
+          }
+        },
+        "eventRoots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Value"
+          }
+        }
+      },
+      "required": [
+        "version",
+        "globals",
+        "frames",
+        "stack",
+        "objects",
+        "eventRoots"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "version": {
+                "const": 0
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "globals": {
+                "maxItems": 0
+              },
+              "frames": {
+                "maxItems": 0
+              },
+              "stack": {
+                "maxItems": 0
+              },
+              "objects": {
+                "maxItems": 0
+              },
+              "eventRoots": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "StateDelta": {
+      "type": "object",
+      "properties": {
+        "globals": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Binding"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stack": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/FrameId"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "eventRoots": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Value"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "framesUpsert": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Frame"
+          }
+        },
+        "framesRemove": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FrameId"
+          }
+        },
+        "objectsUpsert": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectRecord"
+          }
+        },
+        "objectsRemove": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectId"
+          }
+        }
+      },
+      "required": [
+        "globals",
+        "stack",
+        "eventRoots",
+        "framesUpsert",
+        "framesRemove",
+        "objectsUpsert",
+        "objectsRemove"
+      ],
+      "additionalProperties": false
+    },
+    "Checkpoint": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "checkpoint"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "state": {
+          "$ref": "#/$defs/NormalizedState"
+        }
+      },
+      "required": ["kind", "version", "state"],
+      "additionalProperties": false
+    },
+    "Delta": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "delta"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "baseVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "changes": {
+          "$ref": "#/$defs/StateDelta"
+        }
+      },
+      "required": ["kind", "version", "baseVersion", "changes"],
+      "additionalProperties": false
+    },
+    "StateRecord": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Checkpoint"
+        },
+        {
+          "$ref": "#/$defs/Delta"
+        }
+      ]
+    },
+    "ConsoleEntry": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["stdout", "stderr", "input"]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requestId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RequestId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": ["index", "kind", "text", "requestId"],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "input"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "requestId": {
+                "$ref": "#/$defs/RequestId"
+              },
+              "text": {
+                "pattern": "\n$(?![\\s\\S])"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "requestId": {
+                "const": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    "DiagnosticFrame": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceLocation"
+        }
+      },
+      "required": ["name", "source"],
+      "additionalProperties": false
+    },
+    "Diagnostic": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "syntax",
+            "runtime",
+            "unsupported",
+            "limit",
+            "infrastructure"
+          ]
+        },
+        "code": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "SYNTAX_ERROR",
+            "UNCAUGHT_EXCEPTION",
+            "UNSUPPORTED_FEATURE",
+            "ACTIVE_TIMEOUT",
+            "INPUT_IDLE_TIMEOUT",
+            "CONTAINER_LIFETIME",
+            "STARTUP_TIMEOUT",
+            "MEMORY_LIMIT",
+            "EVENT_LIMIT",
+            "TRACE_BYTES_LIMIT",
+            "REGISTRY_LIMIT",
+            "STATE_BYTES_LIMIT",
+            "COLLECTION_LIMIT",
+            "STRING_LIMIT",
+            "INT_DIGITS_LIMIT",
+            "CONSOLE_LIMIT",
+            "FRAME_LIMIT",
+            "INPUT_REQUEST_LIMIT",
+            "DOCKER_UNAVAILABLE",
+            "IMAGE_UNAVAILABLE",
+            "CLIENT_PROTOCOL_ERROR",
+            "RUNNER_PROTOCOL_ERROR",
+            "RUNNER_FAILURE",
+            "TRACE_RECORDER_FAILURE",
+            "FINALIZATION_TIMEOUT",
+            "CLEANUP_FAILED",
+            "CONNECTION_LOST",
+            "BACKEND_SHUTDOWN",
+            "EXCEPTION_OBSERVED"
+          ]
+        },
+        "typeName": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "message": {
+          "type": "string"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "columnNumber": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "traceback": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DiagnosticFrame"
+          }
+        },
+        "omittedTracebackFrames": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "category",
+        "code",
+        "typeName",
+        "message",
+        "source",
+        "columnNumber",
+        "traceback",
+        "omittedTracebackFrames"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "runtime"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "columnNumber": {
+                "const": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Completion": {
+      "type": "object",
+      "properties": {
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "SUCCESS",
+            "USER_ERROR",
+            "LIMIT_EXCEEDED",
+            "SYSTEM_ERROR",
+            "INTERRUPTED"
+          ]
+        },
+        "reason": {
+          "$ref": "#/$defs/ReasonCode"
+        },
+        "traceComplete": {
+          "type": "boolean"
+        },
+        "stateAccuracy": {
+          "type": "string",
+          "enum": ["final", "last_observed", "unavailable"]
+        },
+        "primaryDiagnostic": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Diagnostic"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "acceptedAt": {
+          "$ref": "#/$defs/Timestamp"
+        },
+        "finishedAt": {
+          "$ref": "#/$defs/Timestamp"
+        },
+        "activeElapsedMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "waitingElapsedMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "exitCode": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cleanupConfirmed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "outcome",
+        "reason",
+        "traceComplete",
+        "stateAccuracy",
+        "primaryDiagnostic",
+        "acceptedAt",
+        "finishedAt",
+        "activeElapsedMs",
+        "waitingElapsedMs",
+        "exitCode",
+        "cleanupConfirmed"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "SUCCESS"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reason": {
+                "const": "NONE"
+              },
+              "traceComplete": {
+                "const": true
+              },
+              "stateAccuracy": {
+                "const": "final"
+              },
+              "primaryDiagnostic": {
+                "const": null
+              },
+              "cleanupConfirmed": {
+                "const": true
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "reason": {
+                "not": {
+                  "const": "NONE"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "type": "string",
+                "enum": ["LIMIT_EXCEEDED", "INTERRUPTED"]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "traceComplete": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "LINEEvent": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "const": "LINE"
+        },
+        "stateVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frameId": {
+          "$ref": "#/$defs/FrameId"
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "fileName": {
+              "const": "<codetrace-user>"
+            },
+            "lineNumber": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": ["fileName", "lineNumber"],
+          "additionalProperties": false
+        },
+        "consoleOffset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "index",
+        "kind",
+        "stateVersion",
+        "frameId",
+        "source",
+        "consoleOffset",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "CALLEvent": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "const": "CALL"
+        },
+        "stateVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frameId": {
+          "$ref": "#/$defs/FrameId"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "consoleOffset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "index",
+        "kind",
+        "stateVersion",
+        "frameId",
+        "source",
+        "consoleOffset",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "RETURNEvent": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "const": "RETURN"
+        },
+        "stateVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frameId": {
+          "$ref": "#/$defs/FrameId"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "consoleOffset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "payload": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "returnValueKnown": {
+                  "const": true
+                },
+                "returnValue": {
+                  "allOf": [
+                    {
+                      "$ref": "#/$defs/Value"
+                    },
+                    {
+                      "not": {
+                        "$ref": "#/$defs/NoneValue"
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": ["returnValueKnown", "returnValue"],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "returnValueKnown": {
+                  "const": false
+                },
+                "returnValue": {
+                  "const": null
+                }
+              },
+              "required": ["returnValueKnown", "returnValue"],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "index",
+        "kind",
+        "stateVersion",
+        "frameId",
+        "source",
+        "consoleOffset",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "EXCEPTIONEvent": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "const": "EXCEPTION"
+        },
+        "stateVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frameId": {
+          "$ref": "#/$defs/FrameId"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "consoleOffset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "diagnostic": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/Diagnostic"
+                },
+                {
+                  "properties": {
+                    "category": {
+                      "const": "runtime"
+                    },
+                    "code": {
+                      "const": "EXCEPTION_OBSERVED"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": ["diagnostic"],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "index",
+        "kind",
+        "stateVersion",
+        "frameId",
+        "source",
+        "consoleOffset",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "RUN_ENDEvent": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "const": "RUN_END"
+        },
+        "stateVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frameId": {
+          "const": null
+        },
+        "source": {
+          "const": null
+        },
+        "consoleOffset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "index",
+        "kind",
+        "stateVersion",
+        "frameId",
+        "source",
+        "consoleOffset",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "PythonTraceEvent": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/LINEEvent"
+        },
+        {
+          "$ref": "#/$defs/CALLEvent"
+        },
+        {
+          "$ref": "#/$defs/RETURNEvent"
+        },
+        {
+          "$ref": "#/$defs/EXCEPTIONEvent"
+        }
+      ]
+    },
+    "TraceEvent": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/PythonTraceEvent"
+        },
+        {
+          "$ref": "#/$defs/RUN_ENDEvent"
+        }
+      ]
+    },
+    "TraceDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": "1.0"
+        },
+        "runId": {
+          "$ref": "#/$defs/RunId"
+        },
+        "sourceCode": {
+          "type": "string"
+        },
+        "sourceFileName": {
+          "const": "<codetrace-user>"
+        },
+        "pythonVersion": {
+          "const": "3.13.16"
+        },
+        "checkpointInterval": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "limits": {
+          "$ref": "#/$defs/ResourceLimits"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TraceEvent"
+          },
+          "minItems": 1
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/StateRecord"
+          },
+          "minItems": 1
+        },
+        "console": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ConsoleEntry"
+          }
+        },
+        "completion": {
+          "$ref": "#/$defs/Completion"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "runId",
+        "sourceCode",
+        "sourceFileName",
+        "pythonVersion",
+        "checkpointInterval",
+        "limits",
+        "events",
+        "states",
+        "console",
+        "completion"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "index": 0,
+  "kind": "RUN_END",
+  "stateVersion": 1,
+  "frameId": null,
+  "source": null,
+  "consoleOffset": 0,
+  "payload": {
+    "outcome": "SUCCESS"
+  }
+}

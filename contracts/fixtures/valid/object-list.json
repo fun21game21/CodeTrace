@@ -1,0 +1,11 @@
+{
+  "id": "o1",
+  "kind": "list",
+  "items": [
+    {
+      "kind": "scalar",
+      "type": "int",
+      "value": "9007199254740993"
+    }
+  ]
+}

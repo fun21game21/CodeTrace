@@ -1,0 +1,4521 @@
+{
+  "name": "recursion",
+  "oracle": "TRACING snapshots + ENCODER independent decoder",
+  "trace": {
+    "schemaVersion": "1.0",
+    "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+    "sourceCode": "def f(n):\n if n<2: return 1\n return n*f(n-1)\nr=f(4)",
+    "sourceFileName": "<codetrace-user>",
+    "pythonVersion": "3.13.16",
+    "checkpointInterval": 2,
+    "limits": {
+      "active_runs": 1,
+      "retained_results": 1,
+      "code_bytes": 65536,
+      "max_events": 100000,
+      "trace_bytes": 52428800,
+      "terminal_reserve_bytes": 2097152,
+      "registry_objects": 10000,
+      "state_objects": 2000,
+      "state_bytes": 1048576,
+      "collection_items": 1000,
+      "instance_attributes": 1000,
+      "string_bytes": 16384,
+      "integer_decimal_digits": 1000,
+      "active_frames": 128,
+      "console_bytes": 65536,
+      "output_chunk_bytes": 4096,
+      "input_value_bytes": 8192,
+      "input_requests": 32,
+      "checkpoint_interval": 2,
+      "active_timeout_ms": 10000,
+      "input_idle_timeout_ms": 120000,
+      "container_lifetime_ms": 300000,
+      "startup_timeout_ms": 15000,
+      "result_ttl_ms": 300000,
+      "cleanup_command_timeout_ms": 3000,
+      "cleanup_attempts": 2,
+      "finalization_timeout_ms": 120000,
+      "watchdog_tick_ms": 50,
+      "memory_bytes": 536870912,
+      "memory_plus_swap_bytes": 536870912,
+      "cpus": 1.0,
+      "pids_limit": 16,
+      "tmpfs_bytes": 16777216,
+      "runner_message_bytes": 2097152,
+      "ws_message_bytes": 524288,
+      "native_stderr_bytes": 16384,
+      "history_entries": 100,
+      "max_visual_nodes": 200,
+      "visible_array_items": 200
+    },
+    "events": [
+      {
+        "index": 0,
+        "kind": "CALL",
+        "stateVersion": 1,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": null
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 1,
+        "kind": "LINE",
+        "stateVersion": 1,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 2,
+        "kind": "LINE",
+        "stateVersion": 2,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 3,
+        "kind": "CALL",
+        "stateVersion": 3,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 4,
+        "kind": "LINE",
+        "stateVersion": 3,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 5,
+        "kind": "LINE",
+        "stateVersion": 3,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 6,
+        "kind": "CALL",
+        "stateVersion": 4,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 7,
+        "kind": "LINE",
+        "stateVersion": 4,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 8,
+        "kind": "LINE",
+        "stateVersion": 4,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 9,
+        "kind": "CALL",
+        "stateVersion": 5,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 10,
+        "kind": "LINE",
+        "stateVersion": 5,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 11,
+        "kind": "LINE",
+        "stateVersion": 5,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 12,
+        "kind": "CALL",
+        "stateVersion": 6,
+        "frameId": "f5",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 13,
+        "kind": "LINE",
+        "stateVersion": 6,
+        "frameId": "f5",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      {
+        "index": 14,
+        "kind": "RETURN",
+        "stateVersion": 7,
+        "frameId": "f5",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "1"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      {
+        "index": 15,
+        "kind": "RETURN",
+        "stateVersion": 8,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "2"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      {
+        "index": 16,
+        "kind": "RETURN",
+        "stateVersion": 9,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "6"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      {
+        "index": 17,
+        "kind": "RETURN",
+        "stateVersion": 10,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "24"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      {
+        "index": 18,
+        "kind": "RETURN",
+        "stateVersion": 11,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "payload": {
+          "returnValue": null,
+          "returnValueKnown": false
+        },
+        "consoleOffset": 0
+      },
+      {
+        "index": 19,
+        "kind": "RUN_END",
+        "stateVersion": 12,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 0,
+        "payload": {}
+      }
+    ],
+    "states": [
+      {
+        "kind": "checkpoint",
+        "version": 0,
+        "state": {
+          "version": 0,
+          "globals": [],
+          "frames": [],
+          "stack": [],
+          "objects": [],
+          "eventRoots": []
+        }
+      },
+      {
+        "kind": "delta",
+        "version": 1,
+        "baseVersion": 0,
+        "changes": {
+          "globals": null,
+          "stack": ["f1"],
+          "eventRoots": null,
+          "framesUpsert": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            }
+          ],
+          "framesRemove": [],
+          "objectsUpsert": [],
+          "objectsRemove": []
+        }
+      },
+      {
+        "kind": "checkpoint",
+        "version": 2,
+        "state": {
+          "version": 2,
+          "eventRoots": [],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            }
+          ],
+          "globals": [
+            {
+              "name": "f",
+              "value": {
+                "$ref": "o1"
+              }
+            }
+          ],
+          "objects": [
+            {
+              "id": "o1",
+              "kind": "opaque",
+              "pythonType": "function",
+              "reason": "unsupported_type"
+            }
+          ],
+          "stack": ["f1"]
+        }
+      },
+      {
+        "kind": "delta",
+        "version": 3,
+        "baseVersion": 2,
+        "changes": {
+          "globals": null,
+          "stack": ["f1", "f2"],
+          "eventRoots": null,
+          "framesUpsert": [
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 4
+              },
+              "definitionLine": 1,
+              "id": "f2",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "4"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f1",
+              "qualifiedName": "f"
+            }
+          ],
+          "framesRemove": [],
+          "objectsUpsert": [],
+          "objectsRemove": []
+        }
+      },
+      {
+        "kind": "checkpoint",
+        "version": 4,
+        "state": {
+          "version": 4,
+          "eventRoots": [],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 4
+              },
+              "definitionLine": 1,
+              "id": "f2",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "4"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f1",
+              "qualifiedName": "f"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 3
+              },
+              "definitionLine": 1,
+              "id": "f3",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "3"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f2",
+              "qualifiedName": "f"
+            }
+          ],
+          "globals": [
+            {
+              "name": "f",
+              "value": {
+                "$ref": "o1"
+              }
+            }
+          ],
+          "objects": [
+            {
+              "id": "o1",
+              "kind": "opaque",
+              "pythonType": "function",
+              "reason": "unsupported_type"
+            }
+          ],
+          "stack": ["f1", "f2", "f3"]
+        }
+      },
+      {
+        "kind": "delta",
+        "version": 5,
+        "baseVersion": 4,
+        "changes": {
+          "globals": null,
+          "stack": ["f1", "f2", "f3", "f4"],
+          "eventRoots": null,
+          "framesUpsert": [
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 3
+              },
+              "definitionLine": 1,
+              "id": "f4",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "2"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f3",
+              "qualifiedName": "f"
+            }
+          ],
+          "framesRemove": [],
+          "objectsUpsert": [],
+          "objectsRemove": []
+        }
+      },
+      {
+        "kind": "checkpoint",
+        "version": 6,
+        "state": {
+          "version": 6,
+          "eventRoots": [],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 4
+              },
+              "definitionLine": 1,
+              "id": "f2",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "4"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f1",
+              "qualifiedName": "f"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 3
+              },
+              "definitionLine": 1,
+              "id": "f3",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "3"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f2",
+              "qualifiedName": "f"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 3
+              },
+              "definitionLine": 1,
+              "id": "f4",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "2"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f3",
+              "qualifiedName": "f"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 3
+              },
+              "definitionLine": 1,
+              "id": "f5",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "1"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f4",
+              "qualifiedName": "f"
+            }
+          ],
+          "globals": [
+            {
+              "name": "f",
+              "value": {
+                "$ref": "o1"
+              }
+            }
+          ],
+          "objects": [
+            {
+              "id": "o1",
+              "kind": "opaque",
+              "pythonType": "function",
+              "reason": "unsupported_type"
+            }
+          ],
+          "stack": ["f1", "f2", "f3", "f4", "f5"]
+        }
+      },
+      {
+        "kind": "delta",
+        "version": 7,
+        "baseVersion": 6,
+        "changes": {
+          "globals": null,
+          "stack": null,
+          "eventRoots": [
+            {
+              "kind": "scalar",
+              "type": "int",
+              "value": "1"
+            }
+          ],
+          "framesUpsert": [],
+          "framesRemove": [],
+          "objectsUpsert": [],
+          "objectsRemove": []
+        }
+      },
+      {
+        "kind": "checkpoint",
+        "version": 8,
+        "state": {
+          "version": 8,
+          "eventRoots": [
+            {
+              "kind": "scalar",
+              "type": "int",
+              "value": "2"
+            }
+          ],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 4
+              },
+              "definitionLine": 1,
+              "id": "f2",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "4"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f1",
+              "qualifiedName": "f"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 3
+              },
+              "definitionLine": 1,
+              "id": "f3",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "3"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f2",
+              "qualifiedName": "f"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 3
+              },
+              "definitionLine": 1,
+              "id": "f4",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "2"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f3",
+              "qualifiedName": "f"
+            }
+          ],
+          "globals": [
+            {
+              "name": "f",
+              "value": {
+                "$ref": "o1"
+              }
+            }
+          ],
+          "objects": [
+            {
+              "id": "o1",
+              "kind": "opaque",
+              "pythonType": "function",
+              "reason": "unsupported_type"
+            }
+          ],
+          "stack": ["f1", "f2", "f3", "f4"]
+        }
+      },
+      {
+        "kind": "delta",
+        "version": 9,
+        "baseVersion": 8,
+        "changes": {
+          "globals": null,
+          "stack": ["f1", "f2", "f3"],
+          "eventRoots": [
+            {
+              "kind": "scalar",
+              "type": "int",
+              "value": "6"
+            }
+          ],
+          "framesUpsert": [],
+          "framesRemove": ["f4"],
+          "objectsUpsert": [],
+          "objectsRemove": []
+        }
+      },
+      {
+        "kind": "checkpoint",
+        "version": 10,
+        "state": {
+          "version": 10,
+          "eventRoots": [
+            {
+              "kind": "scalar",
+              "type": "int",
+              "value": "24"
+            }
+          ],
+          "frames": [
+            {
+              "callSite": null,
+              "definitionLine": 1,
+              "id": "f1",
+              "kind": "module",
+              "locals": [],
+              "localsSource": "globals",
+              "name": "<module>",
+              "parameterNames": [],
+              "parentId": null,
+              "qualifiedName": "<module>"
+            },
+            {
+              "callSite": {
+                "fileName": "<codetrace-user>",
+                "lineNumber": 4
+              },
+              "definitionLine": 1,
+              "id": "f2",
+              "kind": "function",
+              "locals": [
+                {
+                  "name": "n",
+                  "value": {
+                    "kind": "scalar",
+                    "type": "int",
+                    "value": "4"
+                  }
+                }
+              ],
+              "localsSource": "own",
+              "name": "f",
+              "parameterNames": ["n"],
+              "parentId": "f1",
+              "qualifiedName": "f"
+            }
+          ],
+          "globals": [
+            {
+              "name": "f",
+              "value": {
+                "$ref": "o1"
+              }
+            }
+          ],
+          "objects": [
+            {
+              "id": "o1",
+              "kind": "opaque",
+              "pythonType": "function",
+              "reason": "unsupported_type"
+            }
+          ],
+          "stack": ["f1", "f2"]
+        }
+      },
+      {
+        "kind": "delta",
+        "version": 11,
+        "baseVersion": 10,
+        "changes": {
+          "globals": [
+            {
+              "name": "f",
+              "value": {
+                "$ref": "o1"
+              }
+            },
+            {
+              "name": "r",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "24"
+              }
+            }
+          ],
+          "stack": ["f1"],
+          "eventRoots": [],
+          "framesUpsert": [],
+          "framesRemove": ["f2"],
+          "objectsUpsert": [],
+          "objectsRemove": []
+        }
+      },
+      {
+        "kind": "checkpoint",
+        "version": 12,
+        "state": {
+          "version": 12,
+          "eventRoots": [],
+          "frames": [],
+          "globals": [
+            {
+              "name": "f",
+              "value": {
+                "$ref": "o1"
+              }
+            },
+            {
+              "name": "r",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "24"
+              }
+            }
+          ],
+          "objects": [
+            {
+              "id": "o1",
+              "kind": "opaque",
+              "pythonType": "function",
+              "reason": "unsupported_type"
+            }
+          ],
+          "stack": []
+        }
+      }
+    ],
+    "console": [],
+    "completion": {
+      "outcome": "SUCCESS",
+      "reason": "NONE",
+      "traceComplete": true,
+      "stateAccuracy": "final",
+      "primaryDiagnostic": null,
+      "acceptedAt": "2026-10-05T15:00:00.000Z",
+      "finishedAt": "2026-10-05T15:00:00.125Z",
+      "activeElapsedMs": 125.25,
+      "waitingElapsedMs": 0,
+      "exitCode": 0,
+      "cleanupConfirmed": true
+    }
+  },
+  "expected": [
+    {
+      "state": {
+        "version": 1,
+        "globals": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "stack": ["f1"],
+        "objects": [],
+        "eventRoots": []
+      },
+      "event": {
+        "index": 0,
+        "kind": "CALL",
+        "stateVersion": 1,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": null
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": null,
+        "mode": "none"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 1,
+        "globals": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "stack": ["f1"],
+        "objects": [],
+        "eventRoots": []
+      },
+      "event": {
+        "index": 1,
+        "kind": "LINE",
+        "stateVersion": 1,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [],
+      "selectedFrameId": "f1",
+      "selectedLocals": [],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 2,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1"]
+      },
+      "event": {
+        "index": 2,
+        "kind": "LINE",
+        "stateVersion": 2,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f1",
+      "selectedLocals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 4,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 3,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2"]
+      },
+      "event": {
+        "index": 3,
+        "kind": "CALL",
+        "stateVersion": 3,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f2",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "4"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 3,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2"]
+      },
+      "event": {
+        "index": 4,
+        "kind": "LINE",
+        "stateVersion": 3,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f2",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "4"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 2,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 3,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2"]
+      },
+      "event": {
+        "index": 5,
+        "kind": "LINE",
+        "stateVersion": 3,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f2",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "4"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 4,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3"]
+      },
+      "event": {
+        "index": 6,
+        "kind": "CALL",
+        "stateVersion": 4,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f3",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "3"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 4,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3"]
+      },
+      "event": {
+        "index": 7,
+        "kind": "LINE",
+        "stateVersion": 4,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f3",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "3"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 2,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 4,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3"]
+      },
+      "event": {
+        "index": 8,
+        "kind": "LINE",
+        "stateVersion": 4,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f3",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "3"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 5,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f4",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "2"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f3",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3", "f4"]
+      },
+      "event": {
+        "index": 9,
+        "kind": "CALL",
+        "stateVersion": 5,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f4",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "2"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f4",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "2"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f3",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 5,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f4",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "2"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f3",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3", "f4"]
+      },
+      "event": {
+        "index": 10,
+        "kind": "LINE",
+        "stateVersion": 5,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f4",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "2"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f4",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "2"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f3",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 2,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 5,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f4",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "2"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f3",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3", "f4"]
+      },
+      "event": {
+        "index": 11,
+        "kind": "LINE",
+        "stateVersion": 5,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f4",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "2"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f4",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "2"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f3",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 6,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f4",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "2"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f3",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f5",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "1"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f4",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3", "f4", "f5"]
+      },
+      "event": {
+        "index": 12,
+        "kind": "CALL",
+        "stateVersion": 6,
+        "frameId": "f5",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 1
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f5",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "1"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f4",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "2"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f3",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f5",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "1"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f4",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 1,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 6,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f4",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "2"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f3",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f5",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "1"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f4",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3", "f4", "f5"]
+      },
+      "event": {
+        "index": 13,
+        "kind": "LINE",
+        "stateVersion": 6,
+        "frameId": "f5",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {},
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f5",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "1"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f4",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "2"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f3",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f5",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "1"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f4",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 2,
+        "mode": "before_line"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 7,
+        "eventRoots": [
+          {
+            "kind": "scalar",
+            "type": "int",
+            "value": "1"
+          }
+        ],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f4",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "2"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f3",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f5",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "1"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f4",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3", "f4", "f5"]
+      },
+      "event": {
+        "index": 14,
+        "kind": "RETURN",
+        "stateVersion": 7,
+        "frameId": "f5",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 2
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "1"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f5",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "1"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f4",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "2"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f3",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f5",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "1"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f4",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 2,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 8,
+        "eventRoots": [
+          {
+            "kind": "scalar",
+            "type": "int",
+            "value": "2"
+          }
+        ],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f4",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "2"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f3",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3", "f4"]
+      },
+      "event": {
+        "index": 15,
+        "kind": "RETURN",
+        "stateVersion": 8,
+        "frameId": "f4",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "2"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f4",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "2"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f4",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "2"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f3",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 9,
+        "eventRoots": [
+          {
+            "kind": "scalar",
+            "type": "int",
+            "value": "6"
+          }
+        ],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 3
+            },
+            "definitionLine": 1,
+            "id": "f3",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "3"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f2",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2", "f3"]
+      },
+      "event": {
+        "index": 16,
+        "kind": "RETURN",
+        "stateVersion": 9,
+        "frameId": "f3",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "6"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f3",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "3"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 3
+          },
+          "definitionLine": 1,
+          "id": "f3",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "3"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f2",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 10,
+        "eventRoots": [
+          {
+            "kind": "scalar",
+            "type": "int",
+            "value": "24"
+          }
+        ],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          },
+          {
+            "callSite": {
+              "fileName": "<codetrace-user>",
+              "lineNumber": 4
+            },
+            "definitionLine": 1,
+            "id": "f2",
+            "kind": "function",
+            "locals": [
+              {
+                "name": "n",
+                "value": {
+                  "kind": "scalar",
+                  "type": "int",
+                  "value": "4"
+                }
+              }
+            ],
+            "localsSource": "own",
+            "name": "f",
+            "parameterNames": ["n"],
+            "parentId": "f1",
+            "qualifiedName": "f"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1", "f2"]
+      },
+      "event": {
+        "index": 17,
+        "kind": "RETURN",
+        "stateVersion": 10,
+        "frameId": "f2",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 3
+        },
+        "payload": {
+          "returnValue": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "24"
+          },
+          "returnValueKnown": true
+        },
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        }
+      ],
+      "selectedFrameId": "f2",
+      "selectedLocals": [
+        {
+          "name": "n",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "4"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        },
+        {
+          "callSite": {
+            "fileName": "<codetrace-user>",
+            "lineNumber": 4
+          },
+          "definitionLine": 1,
+          "id": "f2",
+          "kind": "function",
+          "locals": [
+            {
+              "name": "n",
+              "value": {
+                "kind": "scalar",
+                "type": "int",
+                "value": "4"
+              }
+            }
+          ],
+          "localsSource": "own",
+          "name": "f",
+          "parameterNames": ["n"],
+          "parentId": "f1",
+          "qualifiedName": "f"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 3,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 11,
+        "eventRoots": [],
+        "frames": [
+          {
+            "callSite": null,
+            "definitionLine": 1,
+            "id": "f1",
+            "kind": "module",
+            "locals": [],
+            "localsSource": "globals",
+            "name": "<module>",
+            "parameterNames": [],
+            "parentId": null,
+            "qualifiedName": "<module>"
+          }
+        ],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          },
+          {
+            "name": "r",
+            "value": {
+              "kind": "scalar",
+              "type": "int",
+              "value": "24"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": ["f1"]
+      },
+      "event": {
+        "index": 18,
+        "kind": "RETURN",
+        "stateVersion": 11,
+        "frameId": "f1",
+        "source": {
+          "fileName": "<codetrace-user>",
+          "lineNumber": 4
+        },
+        "payload": {
+          "returnValue": null,
+          "returnValueKnown": false
+        },
+        "consoleOffset": 0
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        },
+        {
+          "name": "r",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "24"
+          }
+        }
+      ],
+      "selectedFrameId": "f1",
+      "selectedLocals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        },
+        {
+          "name": "r",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "24"
+          }
+        }
+      ],
+      "callStack": [
+        {
+          "callSite": null,
+          "definitionLine": 1,
+          "id": "f1",
+          "kind": "module",
+          "locals": [],
+          "localsSource": "globals",
+          "name": "<module>",
+          "parameterNames": [],
+          "parentId": null,
+          "qualifiedName": "<module>"
+        }
+      ],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": 4,
+        "mode": "event"
+      },
+      "eventDiagnostic": null,
+      "completion": null
+    },
+    {
+      "state": {
+        "version": 12,
+        "eventRoots": [],
+        "frames": [],
+        "globals": [
+          {
+            "name": "f",
+            "value": {
+              "$ref": "o1"
+            }
+          },
+          {
+            "name": "r",
+            "value": {
+              "kind": "scalar",
+              "type": "int",
+              "value": "24"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "o1",
+            "kind": "opaque",
+            "pythonType": "function",
+            "reason": "unsupported_type"
+          }
+        ],
+        "stack": []
+      },
+      "event": {
+        "index": 19,
+        "kind": "RUN_END",
+        "stateVersion": 12,
+        "frameId": null,
+        "source": null,
+        "consoleOffset": 0,
+        "payload": {}
+      },
+      "globals": [
+        {
+          "name": "f",
+          "value": {
+            "$ref": "o1"
+          }
+        },
+        {
+          "name": "r",
+          "value": {
+            "kind": "scalar",
+            "type": "int",
+            "value": "24"
+          }
+        }
+      ],
+      "selectedFrameId": null,
+      "selectedLocals": [],
+      "callStack": [],
+      "consoleEntries": [],
+      "highlight": {
+        "lineNumber": null,
+        "mode": "none"
+      },
+      "eventDiagnostic": null,
+      "completion": {
+        "outcome": "SUCCESS",
+        "reason": "NONE",
+        "traceComplete": true,
+        "stateAccuracy": "final",
+        "primaryDiagnostic": null,
+        "acceptedAt": "2026-10-05T15:00:00.000Z",
+        "finishedAt": "2026-10-05T15:00:00.125Z",
+        "activeElapsedMs": 125.25,
+        "waitingElapsedMs": 0,
+        "exitCode": 0,
+        "cleanupConfirmed": true
+      }
+    }
+  ]
+}

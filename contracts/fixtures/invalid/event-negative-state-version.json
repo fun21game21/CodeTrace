@@ -1,0 +1,12 @@
+{
+  "index": 0,
+  "kind": "LINE",
+  "stateVersion": -1,
+  "frameId": "f1",
+  "source": {
+    "fileName": "<codetrace-user>",
+    "lineNumber": 1
+  },
+  "consoleOffset": 0,
+  "payload": {}
+}

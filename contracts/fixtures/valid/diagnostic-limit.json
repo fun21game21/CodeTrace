@@ -1,0 +1,10 @@
+{
+  "category": "limit",
+  "code": "ACTIVE_TIMEOUT",
+  "typeName": null,
+  "message": "bad value",
+  "source": null,
+  "columnNumber": null,
+  "traceback": [],
+  "omittedTracebackFrames": 0
+}

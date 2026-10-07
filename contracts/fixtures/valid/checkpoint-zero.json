@@ -1,0 +1,12 @@
+{
+  "kind": "checkpoint",
+  "version": 0,
+  "state": {
+    "version": 0,
+    "globals": [],
+    "frames": [],
+    "stack": [],
+    "objects": [],
+    "eventRoots": []
+  }
+}

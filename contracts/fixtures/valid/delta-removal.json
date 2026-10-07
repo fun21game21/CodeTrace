@@ -1,0 +1,14 @@
+{
+  "kind": "delta",
+  "version": 2,
+  "baseVersion": 1,
+  "changes": {
+    "globals": null,
+    "stack": [],
+    "eventRoots": null,
+    "framesUpsert": [],
+    "framesRemove": ["f1"],
+    "objectsUpsert": [],
+    "objectsRemove": []
+  }
+}

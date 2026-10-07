@@ -1,0 +1,11 @@
+{
+  "apiVersion": 1,
+  "seq": 1,
+  "type": "run_accepted",
+  "runId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+  "payload": {
+    "clientRequestId": "8ba106dd-35b6-4945-a5db-e1d3120c743d",
+    "acceptedAt": "2026-10-05T15:00:00.000Z",
+    "status": "STARTING"
+  }
+}

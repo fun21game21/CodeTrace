@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "globals": [
+    {
+      "name": "__proto__",
+      "value": {
+        "kind": "scalar",
+        "type": "none",
+        "value": null
+      }
+    },
+    {
+      "name": "\ue000",
+      "value": {
+        "$ref": "o1"
+      }
+    },
+    {
+      "name": "\ud800\udc00",
+      "value": {
+        "$ref": "o1"
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "f1",
+      "parentId": null,
+      "kind": "module",
+      "name": "<module>",
+      "qualifiedName": "<module>",
+      "definitionLine": null,
+      "callSite": null,
+      "parameterNames": [],
+      "localsSource": "globals",
+      "locals": []
+    }
+  ],
+  "stack": ["f1"],
+  "objects": [
+    {
+      "id": "o1",
+      "kind": "list",
+      "items": [
+        {
+          "$ref": "o1"
+        }
+      ]
+    }
+  ],
+  "eventRoots": []
+}
